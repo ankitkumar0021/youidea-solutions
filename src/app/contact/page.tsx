@@ -311,7 +311,7 @@ const ContactPage = () => {
           
           <div className="text-center mt-12">
             <p className="text-gray-600 mb-4">
-              Have more questions? We're here to help!
+              Have more questions? We&apos;re here to help!
             </p>
             <a 
               href="mailto:info@youridea.com" 
