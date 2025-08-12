@@ -1,6 +1,7 @@
 // src/components/Header.jsx
 'use client';
 import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
 import { HiMenu, HiX, HiPhone, HiChevronDown } from 'react-icons/hi';
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 
@@ -11,32 +12,28 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 10) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+      if (window.scrollY > 10) setScrolled(true);
+      else setScrolled(false);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const navItems = [
     { name: 'About Us', href: '#about' },
-    { 
-      name: 'Services', 
+    {
+      name: 'Services',
       href: '/services',
       subItems: [
-        'Web Design & Development',
-        'Mobile App Development',
-        'E-Commerce Development',
-        'Graphic Design',
-        'Video Editing',
-        'SEO Services',
-        'Digital Marketing',
-        'Logo Design'
-      ]
+        { name: 'Web Design & Development', href: '/services/web-devlopment' },
+        { name: 'Mobile App Development', href: '/services/mobile-app' },
+        { name: 'E-Commerce Development', href: '/services/ecommerce' },
+        { name: 'Graphic Design', href: '/services/graphic-design' },
+        { name: 'Video Editing', href: '/services/video-editing' },
+        { name: 'SEO Services', href: '/services/seo' },
+        // { name: 'Digital Marketing', href: '/services/digital-marketing' },
+        { name: 'Logo Design', href: '/services/logo-design' },
+      ],
     },
     { name: 'Portfolio', href: '/portfolio' },
     { name: 'Reviews', href: '/reviews' },
@@ -56,21 +53,13 @@ const Header = () => {
           <div className="text-sm text-gray-600">info@youridea.com</div>
         </div>
         <div className="flex space-x-3">
-          <a href="#" className="text-blue-600 hover:text-blue-800 transition-colors">
-            <FaFacebookF size={16} />
-          </a>
-          <a href="#" className="text-blue-400 hover:text-blue-600 transition-colors">
-            <FaTwitter size={16} />
-          </a>
-          <a href="#" className="text-pink-500 hover:text-pink-700 transition-colors">
-            <FaInstagram size={16} />
-          </a>
-          <a href="#" className="text-blue-700 hover:text-blue-900 transition-colors">
-            <FaLinkedinIn size={16} />
-          </a>
+          <a href="#" className="text-blue-600 hover:text-blue-800 transition-colors"><FaFacebookF size={16} /></a>
+          <a href="#" className="text-blue-400 hover:text-blue-600 transition-colors"><FaTwitter size={16} /></a>
+          <a href="#" className="text-pink-500 hover:text-pink-700 transition-colors"><FaInstagram size={16} /></a>
+          <a href="#" className="text-blue-700 hover:text-blue-900 transition-colors"><FaLinkedinIn size={16} /></a>
         </div>
       </div>
-      
+
       {/* Main navigation */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
@@ -88,55 +77,29 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-1">
             {navItems.map((item) => (
-              <div key={item.name} className="relative group">
-                <a
-                  href={item.href}
-                  className={`flex items-center px-4 py-2 rounded-lg transition-all ${
-                    scrolled 
-                      ? 'text-gray-700 hover:bg-blue-50 hover:text-blue-600' 
-                      : 'text-gray-800 hover:bg-blue-100 hover:text-blue-700'
-                  }`}
-                  onMouseEnter={() => item.subItems && setServicesMenuOpen(true)}
-                  onMouseLeave={() => item.subItems && setServicesMenuOpen(false)}
-                >
+              <div key={item.name} className="relative group" onMouseEnter={() => item.subItems && setServicesMenuOpen(true)} onMouseLeave={() => item.subItems && setServicesMenuOpen(false)}>
+                <Link href={item.href} className={`flex items-center px-4 py-2 rounded-lg transition-all ${scrolled ? 'text-gray-700 hover:bg-blue-50 hover:text-blue-600' : 'text-gray-800 hover:bg-blue-100 hover:text-blue-700'}`}>
                   {item.name}
                   {item.subItems && <HiChevronDown className="ml-1" />}
-                </a>
-                
+                </Link>
+
                 {item.subItems && servicesMenuOpen && (
-                  <div 
-                    className="absolute left-0 mt-1 w-64 bg-white shadow-xl rounded-lg py-2 z-50"
-                    onMouseEnter={() => setServicesMenuOpen(true)}
-                    onMouseLeave={() => setServicesMenuOpen(false)}
-                  >
+                  <div className="absolute left-0 mt-1 w-64 bg-white shadow-xl rounded-lg py-2 z-50" onMouseEnter={() => setServicesMenuOpen(true)} onMouseLeave={() => setServicesMenuOpen(false)}>
                     {item.subItems.map((subItem, index) => (
-                      <a 
-                        key={index} 
-                        href="#"
-                        className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
-                      >
-                        {subItem}
-                      </a>
+                      <Link key={index} href={subItem.href} className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                        {subItem.name}
+                      </Link>
                     ))}
                   </div>
                 )}
               </div>
             ))}
-            <button className="ml-4 px-5 py-2 bg-gradient-to-r from-blue-600 to-indigo-700 text-white rounded-lg font-medium hover:from-blue-700 hover:to-indigo-800 transition-all shadow-md hover:shadow-lg">
-              Get a Quote
-            </button>
+            <button className="ml-4 px-5 py-2 bg-gradient-to-r from-blue-600 to-indigo-700 text-white rounded-lg font-medium hover:from-blue-700 hover:to-indigo-800 transition-all shadow-md hover:shadow-lg">Get a Quote</button>
           </nav>
 
           {/* Mobile menu button */}
-          <button
-            className="md:hidden text-gray-700"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          >
-            {mobileMenuOpen ? (
-              <HiX className="h-8 w-8" />
-            ) : (
-              <HiMenu className="h-8 w-8" />
-            )}
+          <button className="md:hidden text-gray-700" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+            {mobileMenuOpen ? <HiX className="h-8 w-8" /> : <HiMenu className="h-8 w-8" />}
           </button>
         </div>
       </div>
@@ -147,45 +110,35 @@ const Header = () => {
           <div className="px-2 pt-2 pb-4 space-y-1">
             {navItems.map((item) => (
               <div key={item.name}>
-                <a
-                  href={item.href}
-                  className="block px-4 py-3 rounded-lg text-gray-700 hover:bg-blue-50 hover:text-blue-600 font-medium"
-                  onClick={() => {
-                    if (!item.subItems) setMobileMenuOpen(false)
-                  }}
-                >
+                <div className="block px-4 py-3 rounded-lg text-gray-700 hover:bg-blue-50 hover:text-blue-600 font-medium">
                   <div className="flex justify-between items-center">
-                    {item.name}
+                    <Link href={item.href} className="flex-1" onClick={() => { if (!item.subItems) { setMobileMenuOpen(false); setServicesMenuOpen(false); } }}>
+                      <span>{item.name}</span>
+                    </Link>
                     {item.subItems && (
-                      <HiChevronDown 
-                        className="transform transition-transform"
-                        onClick={(e) => {
-                          e.preventDefault();
-                          setServicesMenuOpen(!servicesMenuOpen);
-                        }}
-                      />
+                      <button
+                        onClick={(e) => { e.preventDefault(); e.stopPropagation(); setServicesMenuOpen(!servicesMenuOpen); }}
+                        aria-expanded={servicesMenuOpen}
+                        className="p-1"
+                      >
+                        <HiChevronDown className={`transform transition-transform ${servicesMenuOpen ? 'rotate-180' : 'rotate-0'}`} />
+                      </button>
                     )}
                   </div>
-                </a>
+                </div>
+
                 {item.subItems && servicesMenuOpen && (
                   <div className="ml-4 bg-blue-50 rounded-lg py-2">
                     {item.subItems.map((subItem, index) => (
-                      <a 
-                        key={index} 
-                        href="#"
-                        className="block px-6 py-2 text-gray-600 hover:bg-blue-100 hover:text-blue-700"
-                        onClick={() => setMobileMenuOpen(false)}
-                      >
-                        {subItem}
-                      </a>
+                      <Link key={index} href={subItem.href} className="block px-6 py-2 text-gray-600 hover:bg-blue-100 hover:text-blue-700" onClick={() => { setMobileMenuOpen(false); setServicesMenuOpen(false); }}>
+                        {subItem.name}
+                      </Link>
                     ))}
                   </div>
                 )}
               </div>
             ))}
-            <button className="w-full mt-4 px-4 py-3 bg-gradient-to-r from-blue-600 to-indigo-700 text-white rounded-lg font-medium text-center">
-              Get a Quote
-            </button>
+            <button className="w-full mt-4 px-4 py-3 bg-gradient-to-r from-blue-600 to-indigo-700 text-white rounded-lg font-medium text-center">Get a Quote</button>
           </div>
         </div>
       )}

@@ -2,14 +2,30 @@
 import React from 'react';
 import { HiX, HiExternalLink } from 'react-icons/hi';
 
-const ProjectModal = ({ project, closeModal }) => {
-  const categoryColors = {
-    web: 'bg-blue-600',
-    mobile: 'bg-purple-600',
-    ecommerce: 'bg-green-600',
-    branding: 'bg-yellow-600'
-  };
-  
+const categoryColors = {
+  web: 'bg-blue-600',
+  mobile: 'bg-purple-600',
+  ecommerce: 'bg-green-600',
+  branding: 'bg-yellow-600'
+} as const;
+
+type Project = {
+  category: keyof typeof categoryColors;
+  title: string;
+  client: string;
+  year: string | number;
+  description: string;
+  technologies: string[];
+  challenge: string;
+  solution: string;
+};
+
+type ProjectModalProps = {
+  project: Project;
+  closeModal: () => void;
+};
+
+const ProjectModal: React.FC<ProjectModalProps> = ({ project, closeModal }) => {
   const categoryNames = {
     web: 'Web Design',
     mobile: 'Mobile App',
