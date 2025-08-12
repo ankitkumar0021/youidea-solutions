@@ -1,6 +1,8 @@
 // src/components/Hero.jsx
+import Link from 'next/link';
 import React from 'react';
 import { HiArrowRight } from 'react-icons/hi';
+import ImageComponent from '../ui/ImageComponent';
 
 const Hero = () => {
   return (
@@ -39,23 +41,12 @@ const Hero = () => {
           </div>
           
           <div className="relative">
-            <div className="relative bg-gradient-to-br from-blue-100 to-indigo-100 rounded-2xl p-8 transform rotate-1">
-              <div className="bg-white rounded-xl shadow-xl overflow-hidden">
-                <div className="h-64 bg-gradient-to-r from-blue-50 to-indigo-50 flex items-center justify-center">
-                  <div className="text-center p-6">
-                    <div className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white font-bold text-xl p-2 rounded-lg inline-block mb-4">
-                      <span className="bg-white text-blue-700 rounded px-1 mr-1">YI</span>
-                      YourIdea
-                    </div>
-                    <p className="text-gray-600">Digital Solutions for Modern Businesses</p>
-                  </div>
-                </div>
-              </div>
+            <div className="relative bg-gradient-to-br from-blue-100 to-indigo-100 rounded-2xl p-4 transform ">
+              <Link href={`#`} className="relative block w-full h-full rounded-xl overflow-hidden" aria-label={`Open banner`}>
+                  <ImageComponent url={`/home/h1.jpg`} img_title={`Home Banner`} object_cover={true} />
+                  <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/30 via-transparent to-black/10" />
+              </Link>
             </div>
-            
-            {/* <div className="absolute -top-6 -right-6 w-32 h-32 bg-yellow-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
-            <div className="absolute -bottom-8 -left-6 w-40 h-40 bg-blue-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div> */}
-            {/* <div className="absolute top-20 left-20 w-28 h-28 bg-pink-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div> */}
           </div>
         </div>
       </div>

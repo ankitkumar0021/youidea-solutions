@@ -16,7 +16,7 @@ const CompanyStory = () => {
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="relative">
-            <div className="bg-gradient-to-br from-blue-100 to-indigo-100 rounded-2xl p-8 transform rotate-1">
+            <div className="bg-gradient-to-br from-blue-100 to-indigo-100 rounded-2xl p-8 transform">
               <div className="bg-white rounded-xl shadow-xl overflow-hidden">
                 <div className="h-96 bg-gradient-to-r from-blue-50 to-indigo-50 flex items-center justify-center">
                   <div className="text-center p-6">
