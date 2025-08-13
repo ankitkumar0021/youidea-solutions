@@ -622,7 +622,7 @@ const CareerPage = () => {
                 Have more questions? Contact our HR team
               </p>
               <a 
-                href="mailto:careers@youridea.com" 
+                href="mailto:tracenetwork4u@gmail.com" 
                 className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-700 text-white rounded-lg font-medium shadow-lg hover:from-blue-700 hover:to-indigo-800 transition-all"
               >
                 Contact HR <HiOutlineArrowRight className="ml-2" />

@@ -118,7 +118,7 @@ const LogoDesignPage = () => {
                   View Our Portfolio
                 </Link>
               <a
-                href="https://wa.me/919315235323"
+                href="https://wa.me/919654272754"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg font-bold hover:bg-white hover:text-blue-600 transition-colors inline-block"
@@ -333,12 +333,9 @@ const LogoDesignPage = () => {
             Let&apos;s design a distinctive logo that captures your brand essence and makes a lasting impression.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <button className="px-8 py-4 bg-white text-blue-600 rounded-lg font-bold shadow-lg hover:bg-blue-50 transition-colors">
+            <Link href="/contact" className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg font-bold hover:bg-white hover:text-blue-600 transition-colors">
               Start Your Logo Design
-            </button>
-            <button className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg font-bold hover:bg-white hover:text-blue-600 transition-colors">
-              View Pricing
-            </button>
+            </Link>
           </div>
         </div>
       </section>

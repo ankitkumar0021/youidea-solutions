@@ -36,7 +36,6 @@ const Header = () => {
       ],
     },
     { name: 'Portfolio', href: '/portfolio' },
-    { name: 'Reviews', href: '/reviews' },
     { name: 'Career', href: '/career' },
     { name: 'Contact Us', href: '/contact' },
   ];

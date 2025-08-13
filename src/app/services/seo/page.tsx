@@ -99,7 +99,7 @@ const SEOServicesPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-indigo-50">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20">
+      <div className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20 md:mt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -115,7 +115,7 @@ const SEOServicesPage = () => {
                   View Our Portfolio
                 </Link>
               <a
-                href="https://wa.me/919315235323"
+                href="https://wa.me/919654272754"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg font-bold hover:bg-white hover:text-blue-600 transition-colors inline-block"
@@ -316,12 +316,9 @@ const SEOServicesPage = () => {
             Let&apos;s develop an SEO strategy that drives qualified traffic and grows your business.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <button className="px-8 py-4 bg-white text-blue-600 rounded-lg font-bold shadow-lg hover:bg-blue-50 transition-colors">
-              Get Your SEO Audit
-            </button>
-            <button className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg font-bold hover:bg-white hover:text-blue-600 transition-colors">
+            <Link href="/contact" className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg font-bold hover:bg-white hover:text-blue-600 transition-colors">
               Request Consultation
-            </button>
+            </Link>
           </div>
         </div>
       </section>

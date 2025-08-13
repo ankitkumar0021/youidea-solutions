@@ -76,7 +76,7 @@ const ContactPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-indigo-50">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20 md:mt-12">
+      <div className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20 md:mt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Contact Us</h1>
@@ -168,107 +168,103 @@ const ContactPage = () => {
                 </div>
               )}
               
-              <form onSubmit={handleSubmit}>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Your Name *</label>
+                <form onSubmit={handleSubmit} className="max-w-3xl mx-auto">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                      <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Your Name *</label>
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        required
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors placeholder-gray-600 placeholder-opacity-100 text-gray-700"
+                        placeholder="John Doe"
+                        aria-label="Your name"
+                      />
+                    </div>
+
+                    <div>
+                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email Address *</label>
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        required
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors placeholder-gray-600 placeholder-opacity-100 text-gray-700"
+                        placeholder="john@example.com"
+                        aria-label="Email address"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="mb-6">
+                    <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">Subject *</label>
                     <input
                       type="text"
-                      id="name"
-                      name="name"
-                      value={formData.name}
+                      id="subject"
+                      name="subject"
+                      value={formData.subject}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
-                      placeholder="John Doe"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors placeholder-gray-600 placeholder-opacity-100 text-gray-700"
+                      placeholder="How can we help?"
+                      aria-label="Subject"
                     />
                   </div>
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email Address *</label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      value={formData.email}
+
+                  <div className="mb-6">
+                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Your Message *</label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      value={formData.message}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
-                      placeholder="john@example.com"
+                      rows={5}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors placeholder-gray-600 placeholder-opacity-100 text-gray-700"
+                      placeholder="Tell us about your project..."
+                      aria-label="Your message"
                     />
                   </div>
-                </div>
-                
-                <div className="mb-6">
-                  <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">Subject *</label>
-                  <input
-                    type="text"
-                    id="subject"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
-                    placeholder="How can we help?"
-                  />
-                </div>
-                
-                <div className="mb-6">
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Your Message *</label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    rows={5}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
-                    placeholder="Tell us about your project..."
-                  ></textarea>
-                </div>
-                
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className={`w-full px-6 py-4 text-white rounded-lg font-medium shadow-lg transition-all flex items-center justify-center ${
-                    isSubmitting 
-                      ? 'bg-gray-500 cursor-not-allowed' 
-                      : 'bg-gradient-to-r from-blue-600 to-indigo-700 hover:from-blue-700 hover:to-indigo-800'
-                  }`}
-                >
-                  {isSubmitting ? (
-                    <>
-                      <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                      </svg>
-                      Sending...
-                    </>
-                  ) : (
-                    <>
-                      Send Message <HiOutlinePaperAirplane className="ml-2 transform rotate-90" />
-                    </>
-                  )}
-                </button>
-              </form>
+
+                  <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className={`w-full px-6 py-4 text-white rounded-lg font-medium shadow-lg transition-all flex items-center justify-center ${isSubmitting ? 'bg-gray-500 cursor-not-allowed' : 'bg-gradient-to-r from-blue-600 to-indigo-700 hover:from-blue-700 hover:to-indigo-800'}`}
+                    aria-live="polite"
+                  >
+                    {isSubmitting ? (
+                      <>
+                        <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                        Sending...
+                      </>
+                    ) : (
+                      <>
+                        Send Message <HiOutlinePaperAirplane className="ml-2 transform rotate-90" />
+                      </>
+                    )}
+                  </button>
+                </form>
             </div>
             
             {/* Map Section */}
             <div className="mt-12 bg-white rounded-2xl shadow-lg overflow-hidden">
               <div className="h-96 bg-gradient-to-r from-blue-100 to-indigo-100 flex flex-col items-center justify-center">
-                <div className="text-center">
-                  <div className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white font-bold text-xl p-2 rounded-lg inline-block mb-4">
-                    <span className="bg-white text-blue-700 rounded px-1 mr-1">YI</span>
-                    YourIdea Solutions
-                  </div>
-                  <p className="text-gray-600 max-w-md">123 Business Street, Tech City, TC 10001</p>
-                </div>
-                
-                {/* Map placeholder */}
-                <div className="mt-8 w-full max-w-2xl mx-auto">
-                  <div className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-48 flex items-center justify-center text-gray-500">
-                    Interactive Map Placeholder
-                  </div>
-                </div>
+               <div className="w-full h-full">
+                        <iframe
+                          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3097.690121552356!2d77.44790541040204!3d28.57816058644747!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cefdc54239fb5%3A0x86c9bf9ffd9a721!2sPatwari!5e1!3m2!1sen!2sin!4v1755087998616!5m2!1sen!2sin"
+                          className="w-full h-full border-0"
+                          loading="lazy"
+                          referrerPolicy="no-referrer-when-downgrade"
+                        ></iframe>
+                      </div>
               </div>
             </div>
           </div>
@@ -314,11 +310,15 @@ const ContactPage = () => {
               Have more questions? We&apos;re here to help!
             </p>
             <a 
-              href="mailto:info@youridea.com" 
+              href="https://wa.me/919654272754" 
+              target="_blank" 
+              rel="noopener noreferrer"
               className="inline-flex items-center text-blue-600 font-medium hover:text-blue-800 hover:underline"
             >
-              Contact us directly <HiOutlinePaperAirplane className="ml-2 transform rotate-90" />
+              Contact us directly 
+              <HiOutlinePaperAirplane className="ml-2 transform rotate-90" />
             </a>
+
           </div>
         </div>
       </div>
