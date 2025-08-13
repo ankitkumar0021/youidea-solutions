@@ -1,4 +1,5 @@
 // src/components/about/AboutHero.jsx
+import Link from 'next/link';
 import React from 'react';
 import { HiArrowDown } from 'react-icons/hi';
 
@@ -16,19 +17,19 @@ const AboutHero = () => {
               Discover our journey, values, and the passionate team behind our success.
             </p>
             <div className="flex flex-wrap justify-center lg:justify-start gap-4">
-              <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-700 text-white rounded-lg font-medium shadow-lg hover:from-blue-700 hover:to-indigo-800 transition-all">
-                Meet Our Team
-              </button>
-              <button className="px-8 py-4 bg-white text-gray-800 border border-gray-300 rounded-lg font-medium hover:bg-gray-50 transition-colors">
+              <Link href={`/portfolio`} className="px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-700 text-white rounded-lg font-medium shadow-lg hover:from-blue-700 hover:to-indigo-800 transition-all">
                 View Our Work
-              </button>
+              </Link>
+              {/* <button className="px-8 py-4 bg-white text-gray-800 border border-gray-300 rounded-lg font-medium hover:bg-gray-50 transition-colors">
+                View Our Work
+              </button> */}
             </div>
           </div>
           
           <div className="relative">
             <div className="relative bg-white rounded-2xl p-8 shadow-xl">
               <div className="grid grid-cols-2 gap-4">
-                {[1, 2, 3, 4].map((item) => (
+                {[1, 2, 3, 4]?.map((item) => (
                   <div key={item} className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 flex flex-col items-center justify-center">
                     <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
                       <div className="bg-blue-600 w-10 h-10 rounded-full flex items-center justify-center text-white text-xl font-bold">
@@ -39,7 +40,7 @@ const AboutHero = () => {
                       {['Years', 'Team Members', 'Happy Clients', 'Projects'][item-1]}
                     </h3>
                     <p className="text-blue-600 font-bold">
-                      {['5+', '20+', '100+', '150+'][item-1]}
+                      {['5+', '12+', '50+', '150+'][item-1]}
                     </p>
                   </div>
                 ))}

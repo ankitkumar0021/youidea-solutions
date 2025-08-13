@@ -20,12 +20,12 @@ const Header = () => {
   }, []);
 
   const navItems = [
-    { name: 'About Us', href: '#about' },
+    { name: 'About Us', href: '/about' },
     {
       name: 'Services',
       href: '/services',
       subItems: [
-        { name: 'Web Design & Development', href: '/services/web-devlopment' },
+        { name: 'Web Design & Development', href: '/services/web-development' },
         { name: 'Mobile App Development', href: '/services/mobile-app' },
         { name: 'E-Commerce Development', href: '/services/ecommerce' },
         { name: 'Graphic Design', href: '/services/graphic-design' },

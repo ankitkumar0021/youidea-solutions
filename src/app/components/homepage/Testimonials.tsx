@@ -5,28 +5,29 @@ import { HiStar } from 'react-icons/hi';
 
 const Testimonials = () => {
   const testimonials = [
-    {
-      id: 1,
-      name: "Sarah Johnson",
-      role: "CEO, TechStart Inc.",
-      content: "YourIdea Solutions transformed our online presence. Our new website has increased our leads by 150% in just three months!",
-      rating: 5
-    },
-    {
-      id: 2,
-      name: "Michael Chen",
-      role: "Marketing Director, GrowthCo",
-      content: "The mobile app they developed for us exceeded our expectations. The user experience is seamless and our customers love it.",
-      rating: 5
-    },
-    {
-      id: 3,
-      name: "Emily Rodriguez",
-      role: "Founder, FashionHub",
-      content: "Working with YourIdea was a game-changer for our e-commerce business. Their digital marketing strategies have doubled our sales.",
-      rating: 4
-    }
-  ];
+  {
+    id: 1,
+    name: "Rajesh Kumar",
+    role: "CEO, TechGrow Solutions",
+    content: "YourIdea Solutions made our website look new and professional. In just 3 months, our leads increased by 150%. Great work.",
+    rating: 5
+  },
+  {
+    id: 2,
+    name: "Priya Sharma",
+    role: "Marketing Head, BizBoost",
+    content: "The mobile app they built for us works very smoothly. Our customers like the design and speed a lot.",
+    rating: 5
+  },
+  {
+    id: 3,
+    name: "Amit Verma",
+    role: "Founder, TrendBazaar",
+    content: "Working with YourIdea helped our e-commerce business grow fast. Their marketing strategy doubled our sales.",
+    rating: 4
+  }
+];
+
 
   return (
     <section id="testimonials" className="py-20 bg-gradient-to-r from-blue-50 to-indigo-50">

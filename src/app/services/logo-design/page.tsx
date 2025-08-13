@@ -1,4 +1,5 @@
 // src/pages/services/logo-design.tsx
+import Link from 'next/link';
 import React from 'react';
 import { HiOutlineLightBulb, HiOutlineColorSwatch, HiOutlineRefresh, HiOutlineEye, HiOutlineThumbUp, HiOutlinePencil, HiOutlineSparkles, HiOutlineChat, HiOutlineDocumentText, HiOutlineArrowRight } from 'react-icons/hi';
 import { HiOutlineRocketLaunch } from 'react-icons/hi2';
@@ -101,7 +102,7 @@ const LogoDesignPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-indigo-50">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20">
+      <div className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20 md:mt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -113,12 +114,18 @@ const LogoDesignPage = () => {
                 We design distinctive logos that communicate your brand essence, build recognition, and make a lasting impression.
               </p>
               <div className="flex flex-wrap gap-4">
-                <button className="px-8 py-4 bg-white text-blue-600 rounded-lg font-bold shadow-lg hover:bg-blue-50 transition-colors">
-                  Get Started
-                </button>
-                <button className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg font-bold hover:bg-white hover:text-blue-600 transition-colors">
-                  View Portfolio
-                </button>
+                <Link href="/porfolio" className="px-8 py-4 bg-white text-blue-600 rounded-lg font-bold shadow-lg hover:bg-blue-50 transition-colors">
+                  View Our Portfolio
+                </Link>
+              <a
+                href="https://wa.me/919315235323"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg font-bold hover:bg-white hover:text-blue-600 transition-colors inline-block"
+              >
+                Get Free Consultation
+              </a>
+
               </div>
             </div>
             <div className="relative">

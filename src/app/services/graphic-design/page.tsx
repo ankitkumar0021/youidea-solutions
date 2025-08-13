@@ -3,6 +3,7 @@ import React from 'react';
 import { HiOutlineLightBulb, HiOutlineColorSwatch, HiOutlinePhotograph, HiOutlineDocumentText, HiOutlineShoppingBag, HiOutlineDesktopComputer, HiOutlineGlobe, HiOutlineChat, HiOutlinePencil, HiOutlineEye, HiOutlineRefresh, HiOutlineThumbUp } from 'react-icons/hi';
 import { FaAngleDoubleDown, FaFigma, FaSketch } from 'react-icons/fa';
 import { HiOutlineRocketLaunch } from 'react-icons/hi2';
+import Link from 'next/link';
 
 const GraphicDesignPage = () => {
   const services = [
@@ -111,7 +112,7 @@ const GraphicDesignPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-indigo-50">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20">
+      <div className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20 md:mt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -123,12 +124,20 @@ const GraphicDesignPage = () => {
                 We create compelling visual identities that communicate your brand story, engage your audience, and elevate your business.
               </p>
               <div className="flex flex-wrap gap-4">
-                <button className="px-8 py-4 bg-white text-blue-600 rounded-lg font-bold shadow-lg hover:bg-blue-50 transition-colors">
-                  Get Free Consultation
-                </button>
-                <button className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg font-bold hover:bg-white hover:text-blue-600 transition-colors">
-                  View Design Portfolio
-                </button>
+                <div className="flex flex-wrap gap-4">
+                <Link href="/porfolio" className="px-8 py-4 bg-white text-blue-600 rounded-lg font-bold shadow-lg hover:bg-blue-50 transition-colors">
+                  View Our Portfolio
+                </Link>
+              <a
+                href="https://wa.me/919315235323"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg font-bold hover:bg-white hover:text-blue-600 transition-colors inline-block"
+              >
+                Get Free Consultation
+              </a>
+
+              </div>
               </div>
             </div>
             <div className="relative">

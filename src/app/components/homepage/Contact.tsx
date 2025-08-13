@@ -39,7 +39,8 @@ const Contact = () => {
                 </div>
                 <div className="ml-4">
                   <h4 className="text-lg font-bold text-gray-900">Phone Number</h4>
-                  <p className="text-gray-600">+1 (123) 456-7890</p>
+                  <p className="text-gray-600">+91 9654272754</p>
+                  <p className="text-gray-600">+91 9315235323</p>
                 </div>
               </div>
               
@@ -84,7 +85,7 @@ const Contact = () => {
                     <input
                       type="text"
                       id="name"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 placeholder-gray-500"
                       placeholder="John Doe"
                     />
                   </div>
@@ -93,7 +94,7 @@ const Contact = () => {
                     <input
                       type="email"
                       id="email"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 placeholder-gray-500"
                       placeholder="john@example.com"
                     />
                   </div>
@@ -103,7 +104,7 @@ const Contact = () => {
                   <input
                     type="text"
                     id="subject"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 placeholder-gray-500"
                     placeholder="How can we help?"
                   />
                 </div>
@@ -111,8 +112,7 @@ const Contact = () => {
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Message</label>
                   <textarea
                     id="message"
-                    // rows="5"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 placeholder-gray-500"
                     placeholder="Your message here..."
                   ></textarea>
                 </div>

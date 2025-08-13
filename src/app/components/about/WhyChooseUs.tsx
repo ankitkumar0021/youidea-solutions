@@ -70,7 +70,7 @@ const WhyChooseUs = () => {
                   <p className="text-gray-700">Projects Completed</p>
                 </div>
                 <div className="bg-blue-50 p-6 rounded-xl">
-                  <div className="text-3xl font-bold text-blue-600 mb-2">20+</div>
+                  <div className="text-3xl font-bold text-blue-600 mb-2">12+</div>
                   <p className="text-gray-700">Team Members</p>
                 </div>
               </div>

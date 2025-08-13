@@ -1,4 +1,5 @@
 // src/pages/services/seo-services.tsx
+import Link from 'next/link';
 import React from 'react';
 import { HiOutlineSearch, HiOutlineChartBar, HiOutlineDocumentText, HiOutlineGlobe, HiOutlineDeviceMobile, HiOutlineChat, HiOutlineLightBulb, HiOutlinePencil, HiOutlineEye, HiOutlineRefresh, HiOutlineThumbUp } from 'react-icons/hi';
 
@@ -110,12 +111,18 @@ const SEOServicesPage = () => {
                 Our data-driven SEO strategies help businesses rank higher, attract qualified leads, and grow revenue sustainably.
               </p>
               <div className="flex flex-wrap gap-4">
-                <button className="px-8 py-4 bg-white text-blue-600 rounded-lg font-bold shadow-lg hover:bg-blue-50 transition-colors">
-                  Get Free SEO Audit
-                </button>
-                <button className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg font-bold hover:bg-white hover:text-blue-600 transition-colors">
-                  View Case Studies
-                </button>
+                <Link href="/porfolio" className="px-8 py-4 bg-white text-blue-600 rounded-lg font-bold shadow-lg hover:bg-blue-50 transition-colors">
+                  View Our Portfolio
+                </Link>
+              <a
+                href="https://wa.me/919315235323"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg font-bold hover:bg-white hover:text-blue-600 transition-colors inline-block"
+              >
+                Get Free Consultation
+              </a>
+
               </div>
             </div>
             <div className="relative">

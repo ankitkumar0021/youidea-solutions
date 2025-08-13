@@ -4,6 +4,7 @@ import { HiOutlineShoppingCart, HiOutlineShoppingBag, HiOutlineCreditCard, HiOut
 import { FaShopify, FaWordpress, FaMagento } from 'react-icons/fa';
 import { SiWoocommerce, SiBigcommerce } from 'react-icons/si';
 import { HiOutlineRocketLaunch } from 'react-icons/hi2';
+import Link from 'next/link';
 
 const EcommerceDevelopmentPage = () => {
   const services = [
@@ -172,7 +173,7 @@ const EcommerceDevelopmentPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-indigo-50">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20">
+      <div className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20 md:mt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -184,12 +185,20 @@ const EcommerceDevelopmentPage = () => {
                 We build high-converting e-commerce stores that drive sales, engage customers, and grow your business 24/7.
               </p>
               <div className="flex flex-wrap gap-4">
-                <button className="px-8 py-4 bg-white text-blue-600 rounded-lg font-bold shadow-lg hover:bg-blue-50 transition-colors">
-                  Get Free Consultation
-                </button>
-                <button className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg font-bold hover:bg-white hover:text-blue-600 transition-colors">
+                <div className="flex flex-wrap gap-4">
+                <Link href="/porfolio" className="px-8 py-4 bg-white text-blue-600 rounded-lg font-bold shadow-lg hover:bg-blue-50 transition-colors">
                   View Our Portfolio
-                </button>
+                </Link>
+              <a
+                href="https://wa.me/919315235323"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg font-bold hover:bg-white hover:text-blue-600 transition-colors inline-block"
+              >
+                Get Free Consultation
+              </a>
+
+              </div>
               </div>
             </div>
             <div className="relative">

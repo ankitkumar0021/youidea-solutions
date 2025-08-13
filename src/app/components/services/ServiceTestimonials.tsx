@@ -5,30 +5,56 @@ import { HiStar } from 'react-icons/hi';
 const ServiceTestimonials = () => {
   const testimonials = [
     {
-      id: 1,
-      name: "Sarah Johnson",
-      role: "CEO, TechStart Inc.",
-      service: "Web Development",
-      content: "Our new website has increased leads by 150% in just three months! The team at YourIdea delivered beyond our expectations.",
-      rating: 5
-    },
-    {
-      id: 2,
-      name: "Michael Chen",
-      role: "Marketing Director, GrowthCo",
-      service: "Mobile App Development",
-      content: "The mobile app they developed for us exceeded all expectations. User engagement has increased by 80% since launch.",
-      rating: 5
-    },
-    {
-      id: 3,
-      name: "Emily Rodriguez",
-      role: "Founder, FashionHub",
-      service: "E-Commerce & Digital Marketing",
-      content: "Working with YourIdea transformed our online business. Sales doubled within six months of implementing their solutions.",
-      rating: 4
-    }
-  ];
+    id: 1,
+    name: "Jacky TR",
+    role: "Director, TR Restaurent & Cafe",
+    service: "Online Food",
+    content: "Our online food booking system is now completely online. It has made things much easier for our clients.",
+    rating: 5
+  },
+  
+  {
+    id: 2,
+    name: "Sneha Kapoor",
+    role: "Manager, Om Sai Boutique",
+    service: "Mobile App Development",
+    content: "They made an easy-to-use app for my shop. Orders have increased in just a few weeks.",
+    rating: 5
+  },
+  {
+    id: 3,
+    name: "Rajesh Nair",
+    role: "Founder, Gupta Electronics",
+    service: "E-commerce Store Setup",
+    content: "Good service and quick delivery. My online store is getting more visitors now.",
+    rating: 4
+  },
+  {
+    id: 4,
+    name: "Deepak Kumar",
+    role: "Owner, Infinity bliss",
+    service: "Event Decoration",
+    content: "They designed a simple and attractive website for my Event decoration. Customers can now view our menu online.",
+    rating: 5
+  },
+  {
+    id: 5,
+    name: "Karan Malhotra",
+    role: "Owner, RK Furniture",
+    service: "Website Design & Development",
+    content: "Very professional team. My website looks modern and customers like it a lot.",
+    rating: 5
+  },
+  {
+    id: 6,
+    name: "Pooja Deshmukh",
+    role: "Owner, Unique Creations",
+    service: "Online Store Development",
+    content: "They helped me start selling handmade products online. Business is growing every month.",
+    rating: 4
+  }
+];
+
 
   return (
     <section className="py-20 bg-gradient-to-r from-blue-50 to-indigo-50">

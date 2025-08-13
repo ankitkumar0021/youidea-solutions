@@ -81,26 +81,7 @@ const ServiceDetails: React.FC<ServiceDetailsProps> = ({ activeCategory }) => {
         "Sales analytics"
       ]
     },
-    {
-      id: 4,
-      category: 'erp',
-      icon: <HiDatabase className="w-8 h-8 text-purple-500" />,
-      title: "CRM/ERP Development",
-      description: "Custom solutions to streamline your business operations, improve efficiency, and enhance customer relationships.",
-      features: [
-        "Custom CRM development",
-        "ERP system implementation",
-        "Business process automation",
-        "Data analytics & reporting",
-        "Integration with existing systems"
-      ],
-      benefits: [
-        "Improved workflow efficiency",
-        "Better customer insights",
-        "Reduced operational costs",
-        "Scalable business systems"
-      ]
-    },
+    
     {
       id: 5,
       category: 'marketing',
@@ -252,10 +233,6 @@ const ServiceDetails: React.FC<ServiceDetailsProps> = ({ activeCategory }) => {
                       </div>
                     </div>
 
-                    <button className="w-full mt-6 py-3 bg-gradient-to-r from-blue-50 to-indigo-50 text-blue-600 rounded-lg font-medium flex items-center justify-center group">
-                      Get Started
-                      <HiChevronRight className="ml-2 transition-transform group-hover:translate-x-1" />
-                    </button>
                   </div>
                 </motion.div>
               )}

@@ -4,6 +4,7 @@ import { HiOutlineDeviceMobile, HiOutlineDeviceTablet, HiOutlineCog, HiOutlineSh
 import { FaApple, FaAndroid, FaReact } from 'react-icons/fa';
 import { SiIonic, SiSwift, SiKotlin } from 'react-icons/si';
 import { FaFlutter } from 'react-icons/fa6';
+import Link from 'next/link';
 
 const MobileAppDevelopmentPage = () => {
   const services = [
@@ -142,7 +143,7 @@ const MobileAppDevelopmentPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-indigo-50">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20">
+      <div className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20 md:mt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -154,12 +155,20 @@ const MobileAppDevelopmentPage = () => {
                 We create custom mobile applications that engage users, solve problems, and drive business growth across iOS and Android platforms.
               </p>
               <div className="flex flex-wrap gap-4">
-                <button className="px-8 py-4 bg-white text-blue-600 rounded-lg font-bold shadow-lg hover:bg-blue-50 transition-colors">
-                  Get Free Consultation
-                </button>
-                <button className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg font-bold hover:bg-white hover:text-blue-600 transition-colors">
-                  View App Portfolio
-                </button>
+                <div className="flex flex-wrap gap-4">
+                <Link href="/porfolio" className="px-8 py-4 bg-white text-blue-600 rounded-lg font-bold shadow-lg hover:bg-blue-50 transition-colors">
+                  View Our Portfolio
+                </Link>
+              <a
+                href="https://wa.me/919315235323"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg font-bold hover:bg-white hover:text-blue-600 transition-colors inline-block"
+              >
+                Get Free Consultation
+              </a>
+
+              </div>
               </div>
             </div>
             <div className="relative">

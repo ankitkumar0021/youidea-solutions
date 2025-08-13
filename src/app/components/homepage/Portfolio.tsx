@@ -25,12 +25,12 @@ type Project = {
 };
 
 const projects: Project[] = [
-	{ id: 1, title: 'E-Commerce Platform', category: 'ecommerce', description: 'A fully-featured online shopping solution.', image: '/home/ec.jpg' },
-	{ id: 2, title: 'Mobile App', category: 'mobile', description: 'Workout tracking and nutrition planning app.', image: '/home/mb.jpg' },
+	{ id: 1, title: 'E-Commerce Platform', category: 'ecommerce', description: 'A fully-featured online shopping solution.', image: '/home/ec1.jpg' },
+	{ id: 2, title: 'Mobile App', category: 'mobile', description: 'Workout tracking and nutrition planning app.', image: '/home/mobile.jpg' },
 	{ id: 3, title: 'Corporate Website Redesign', category: 'web', description: 'Modern website for a financial services company.', image: '/home/ec.jpg' },
-	{ id: 4, title: 'Restaurant Branding', category: 'branding', description: 'Complete branding package for a new restaurant.', image: '/home/ec.jpg' },
-	{ id: 5, title: 'Real Estate Portal', category: 'web', description: 'Property listing and management system.', image: '/home/mb.jpg' },
-	{ id: 6, title: 'Gaming Mobile App', category: 'mobile', description: 'Multiplayer mobile game with social features.', image: '/home/mb.jpg' }
+	{ id: 4, title: 'Restaurant Branding', category: 'branding', description: 'Complete branding package for a new restaurant.', image: '/home/res.jpg' },
+	{ id: 5, title: 'Real Estate Portal', category: 'web', description: 'Property listing and management system.', image: '/home/real.jpg' },
+	{ id: 6, title: 'Gaming Mobile App', category: 'mobile', description: 'Multiplayer mobile game with social features.', image: '/home/game.jpg' }
 ];
 
 const Portfolio: React.FC = () => {
