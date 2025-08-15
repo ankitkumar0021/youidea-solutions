@@ -5,6 +5,7 @@ import { FaShopify, FaWordpress, FaMagento } from 'react-icons/fa';
 import { SiWoocommerce, SiBigcommerce } from 'react-icons/si';
 import { HiOutlineRocketLaunch } from 'react-icons/hi2';
 import Link from 'next/link';
+import { FiActivity, FiHeadphones, FiWatch } from 'react-icons/fi';
 
 const EcommerceDevelopmentPage = () => {
   const services = [
@@ -170,6 +171,12 @@ const EcommerceDevelopmentPage = () => {
     }
   ];
 
+    const products = [
+    { name: 'Wireless Headphones', sales: '$2,450', icon: <FiHeadphones className="w-4 h-4" aria-hidden="true" /> },
+    { name: 'Smart Watch Series 5', sales: '$1,980', icon: <FiWatch className="w-4 h-4" aria-hidden="true" /> },
+    { name: 'Fitness Tracker', sales: '$1,230', icon: <FiActivity className="w-4 h-4" aria-hidden="true" /> }
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-indigo-50">
       {/* Hero Section */}
@@ -186,7 +193,7 @@ const EcommerceDevelopmentPage = () => {
               </p>
               <div className="flex flex-wrap gap-4">
                 <div className="flex flex-wrap gap-4">
-                <Link href="/porfolio" className="px-8 py-4 bg-white text-blue-600 rounded-lg font-bold shadow-lg hover:bg-blue-50 transition-colors">
+                <Link href="/portfolio" className="px-8 py-4 bg-white text-blue-600 rounded-lg font-bold shadow-lg hover:bg-blue-50 transition-colors">
                   View Our Portfolio
                 </Link>
               <a
@@ -235,27 +242,25 @@ const EcommerceDevelopmentPage = () => {
                       </div>
                     </div>
                     
-                    <div className="bg-white rounded-xl p-4">
-                      <div className="flex justify-between mb-3">
-                        <div className="text-sm font-medium text-gray-700">Top Selling Products</div>
-                        <div className="text-sm text-blue-600">View All</div>
-                      </div>
-                      <div className="space-y-3">
-                        {[
-                          { name: "Wireless Headphones", sales: "$2,450" },
-                          { name: "Smart Watch Series 5", sales: "$1,980" },
-                          { name: "Fitness Tracker", sales: "$1,230" }
-                        ].map((product, index) => (
-                          <div key={index} className="flex justify-between items-center">
-                            <div className="flex items-center">
-                              <div className="w-8 h-8 bg-blue-100 rounded-lg mr-3"></div>
-                              <div className="text-sm font-medium text-gray-900">{product.name}</div>
+                       <div className="bg-white rounded-xl p-4">
+                        <div className="flex justify-between items-center mb-3">
+                          <div className="text-sm font-medium text-gray-700">Top Selling Products</div>
+                        </div>
+
+                        <div className="space-y-3">
+                          {products.map((product, index) => (
+                            <div key={index} className="flex justify-between items-center">
+                              <div className="flex items-center">
+                                <div className="w-8 h-8 bg-blue-50 text-blue-600 rounded-lg mr-3 inline-flex items-center justify-center">
+                                  {product.icon}
+                                </div>
+                                <div className="text-sm font-medium text-gray-900">{product.name}</div>
+                              </div>
+                              <div className="text-sm font-semibold text-gray-700">{product.sales}</div>
                             </div>
-                            <div className="text-sm font-medium text-gray-700">{product.sales}</div>
-                          </div>
-                        ))}
+                          ))}
+                        </div>
                       </div>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -342,7 +347,7 @@ const EcommerceDevelopmentPage = () => {
       </section>
 
       {/* Our Process */}
-      <section className="py-20 bg-gradient-to-r from-blue-50 to-indigo-50">
+      {/* <section className="py-20 bg-gradient-to-r from-blue-50 to-indigo-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Our E-Commerce Development Process</h2>
@@ -353,7 +358,6 @@ const EcommerceDevelopmentPage = () => {
           </div>
           
           <div className="relative">
-            {/* Timeline line */}
             <div className="absolute left-4 md:left-1/2 md:-translate-x-1/2 top-0 h-full w-1 bg-blue-200 hidden md:block"></div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-y-12">
@@ -362,7 +366,6 @@ const EcommerceDevelopmentPage = () => {
                   key={index} 
                   className={`relative ${index % 2 === 0 ? 'md:pr-20 md:text-right' : 'md:pl-20 md:mt-40'}`}
                 >
-                  {/* Circle connector */}
                   <div className="absolute top-0 left-4 md:left-1/2 w-8 h-8 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full flex items-center justify-center text-white -translate-x-1/2 z-10">
                     {step.icon}
                   </div>
@@ -379,7 +382,7 @@ const EcommerceDevelopmentPage = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Benefits */}
       <section className="py-20 bg-white">
@@ -465,14 +468,6 @@ const EcommerceDevelopmentPage = () => {
           <p className="text-xl max-w-3xl mx-auto mb-10">
             Let&apos;s build a high-converting e-commerce platform that grows your business.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <button className="px-8 py-4 bg-white text-blue-600 rounded-lg font-bold shadow-lg hover:bg-blue-50 transition-colors">
-              Start Your Project
-            </button>
-            <button className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg font-bold hover:bg-white hover:text-blue-600 transition-colors">
-              Get Free Consultation
-            </button>
-          </div>
         </div>
       </section>
     </div>

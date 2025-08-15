@@ -1,9 +1,10 @@
 // src/pages/services/graphic-design.tsx
 import React from 'react';
-import { HiOutlineLightBulb, HiOutlineColorSwatch, HiOutlinePhotograph, HiOutlineDocumentText, HiOutlineShoppingBag, HiOutlineDesktopComputer, HiOutlineGlobe, HiOutlineChat, HiOutlinePencil, HiOutlineEye, HiOutlineRefresh, HiOutlineThumbUp } from 'react-icons/hi';
+import { HiOutlineLightBulb, HiOutlineColorSwatch, HiOutlinePhotograph, HiOutlineDocumentText, HiOutlineShoppingBag, HiOutlineDesktopComputer, HiOutlineGlobe, HiOutlineChat, HiOutlinePencil, HiOutlineEye, HiOutlineRefresh, HiOutlineThumbUp, HiDeviceMobile, HiOutlinePrinter, HiOutlineTemplate } from 'react-icons/hi';
 import { FaAngleDoubleDown, FaFigma, FaSketch } from 'react-icons/fa';
 import { HiOutlineRocketLaunch } from 'react-icons/hi2';
 import Link from 'next/link';
+import { SiAdobeaftereffects, SiAdobeillustrator, SiAdobeindesign, SiAdobephotoshop, SiCanva, SiFigma, SiFramer, SiSketch } from 'react-icons/si';
 
 const GraphicDesignPage = () => {
   const services = [
@@ -72,14 +73,18 @@ const GraphicDesignPage = () => {
     }
   ];
 
-  const tools = [
-    { name: "Adobe Creative Suite", icon: <FaAngleDoubleDown className="w-10 h-10" /> },
-    { name: "Figma", icon: <FaFigma className="w-10 h-10" /> },
-    { name: "Sketch", icon: <FaSketch className="w-10 h-10" /> },
-    { name: "Procreate", icon: <HiOutlinePencil className="w-10 h-10" /> },
-    { name: "Canva", icon: <HiOutlineColorSwatch className="w-10 h-10" /> },
-    { name: "Affinity Designer", icon: <HiOutlinePencil className="w-10 h-10" /> }
-  ];
+type Tool = { name: string; icon: React.ReactNode; label?: string };
+
+const tools: Tool[] = [
+  { name: 'Figma', icon: <SiFigma className="w-8 h-8" />, label: 'UI/UX & Prototyping' },
+  { name: 'Photoshop', icon: <SiAdobephotoshop className="w-8 h-8" />, label: 'Image Editing' },
+  { name: 'Illustrator', icon: <SiAdobeillustrator className="w-8 h-8" />, label: 'Vector & Logo' },
+  { name: 'Sketch', icon: <SiSketch className="w-8 h-8" />, label: 'Design Systems' },
+  { name: 'Canva', icon: <SiCanva className="w-8 h-8" />, label: 'Quick Marketing Assets' },
+  { name: 'Framer', icon: <SiFramer className="w-8 h-8" />, label: 'Prototyping & Motion' },
+  { name: 'After Effects', icon: <SiAdobeaftereffects className="w-8 h-8" />, label: 'Motion & Animation' },
+  { name: 'InDesign', icon: <SiAdobeindesign className="w-8 h-8" />, label: 'Print & Layout' }
+];
 
   const benefits = [
     {
@@ -125,7 +130,7 @@ const GraphicDesignPage = () => {
               </p>
               <div className="flex flex-wrap gap-4">
                 <div className="flex flex-wrap gap-4">
-                <Link href="/porfolio" className="px-8 py-4 bg-white text-blue-600 rounded-lg font-bold shadow-lg hover:bg-blue-50 transition-colors">
+                <Link href="/portfolio" className="px-8 py-4 bg-white text-blue-600 rounded-lg font-bold shadow-lg hover:bg-blue-50 transition-colors">
                   View Our Portfolio
                 </Link>
               <a
@@ -141,54 +146,64 @@ const GraphicDesignPage = () => {
               </div>
             </div>
             <div className="relative">
-              <div className="relative z-10">
-                <div className="bg-white rounded-3xl p-6 shadow-2xl">
-                  <div className="flex justify-between mb-4">
-                    <div className="flex space-x-2">
-                      <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-                      <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                      <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                    </div>
-                    <div className="text-sm text-gray-500">Design Showcase</div>
-                  </div>
-                  <div className="bg-gradient-to-br from-blue-100 to-indigo-100 rounded-2xl p-6 h-96">
-                    <div className="grid grid-cols-2 gap-4">
-                      <div className="bg-gradient-to-r from-blue-500 to-indigo-600 rounded-xl aspect-square flex items-center justify-center">
-                        <div className="text-white font-bold text-center">
-                          <div className="text-2xl mb-2">Logo</div>
-                          <div className="w-16 h-16 mx-auto bg-white/20 rounded-full"></div>
-                        </div>
-                      </div>
-                      <div className="bg-gradient-to-r from-yellow-400 to-orange-500 rounded-xl aspect-square flex items-center justify-center">
-                        <div className="text-white font-bold text-center">
-                          <div className="text-2xl mb-2">Branding</div>
-                          <div className="grid grid-cols-2 gap-1">
-                            <div className="w-6 h-6 bg-white/20 rounded"></div>
-                            <div className="w-6 h-6 bg-white/20 rounded"></div>
-                            <div className="w-6 h-6 bg-white/20 rounded"></div>
-                            <div className="w-6 h-6 bg-white/20 rounded"></div>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="bg-gradient-to-r from-green-500 to-teal-600 rounded-xl aspect-square flex items-center justify-center">
-                        <div className="text-white font-bold text-center">
-                          <div className="text-2xl mb-2">Print</div>
-                          <div className="w-12 h-4 bg-white/20 rounded-full mx-auto"></div>
-                        </div>
-                      </div>
-                      <div className="bg-gradient-to-r from-pink-500 to-purple-600 rounded-xl aspect-square flex items-center justify-center">
-                        <div className="text-white font-bold text-center">
-                          <div className="text-2xl mb-2">Digital</div>
-                          <div className="w-8 h-8 bg-white/20 rounded-full mx-auto"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+      <div className="relative z-10">
+        <div className="bg-white rounded-3xl p-4 md:p-6 shadow-2xl">
+          <div className="flex justify-between items-center mb-4">
+            <div className="flex space-x-2 items-center">
+              <div className="w-3 h-3 bg-red-500 rounded-full" />
+              <div className="w-3 h-3 bg-yellow-500 rounded-full" />
+              <div className="w-3 h-3 bg-green-500 rounded-full" />
+            </div>
+            <div className="text-sm text-gray-500">Design Showcase</div>
+          </div>
+
+          <div className="bg-gradient-to-br from-blue-100 to-indigo-100 rounded-2xl p-4 md:p-6 md:h-96 h-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 h-full">
+              <div className="rounded-xl flex flex-col items-center justify-center p-4 md:p-6 bg-gradient-to-r from-blue-500 to-indigo-600 transform transition hover:scale-105">
+                <div className="bg-white/20 p-3 rounded-full inline-flex items-center justify-center mb-3">
+                  <HiOutlinePhotograph className="w-6 h-6 text-white" />
+                </div>
+                <div className="text-white font-bold text-center">
+                  <div className="text-xl md:text-2xl mb-2">Logo</div>
                 </div>
               </div>
-              <div className="absolute -top-6 -right-6 w-32 h-32 bg-yellow-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
-              <div className="absolute -bottom-8 -left-6 w-40 h-40 bg-blue-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
+
+              <div className="rounded-xl flex flex-col items-center justify-center p-4 md:p-6 bg-gradient-to-r from-yellow-400 to-orange-500 transform transition hover:scale-105">
+                <div className="bg-white/20 p-3 rounded-full inline-flex items-center justify-center mb-3">
+                  <HiOutlineTemplate className="w-6 h-6 text-white" />
+                </div>
+                <div className="text-white font-bold text-center">
+                  <div className="text-xl md:text-2xl mb-2">Branding</div>
+                  
+                </div>
+              </div>
+
+              <div className="rounded-xl flex flex-col items-center justify-center p-4 md:p-6 bg-gradient-to-r from-green-500 to-teal-600 transform transition hover:scale-105">
+                <div className="bg-white/20 p-3 rounded-full inline-flex items-center justify-center mb-3">
+                  <HiOutlinePrinter className="w-6 h-6 text-white" />
+                </div>
+                <div className="text-white font-bold text-center">
+                  <div className="text-xl md:text-2xl mb-2">Print</div>
+                </div>
+              </div>
+
+              <div className="rounded-xl flex flex-col items-center justify-center p-4 md:p-6 bg-gradient-to-r from-pink-500 to-purple-600 transform transition hover:scale-105">
+                <div className="bg-white/20 p-3 rounded-full inline-flex items-center justify-center mb-3">
+                  <HiDeviceMobile className="w-6 h-6 text-white" />
+                </div>
+                <div className="text-white font-bold text-center">
+                  <div className="text-xl md:text-2xl mb-2">Digital</div>
+                </div>
+              </div>
             </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Blobs - hidden on small screens to avoid layout issues */}
+      <div className="hidden md:block absolute -top-6 -right-6 w-32 h-32 bg-yellow-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob" />
+      <div className="hidden md:block absolute -bottom-8 -left-6 w-40 h-40 bg-blue-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000" />
+    </div>
           </div>
         </div>
       </div>
@@ -205,13 +220,13 @@ const GraphicDesignPage = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
+            {services && services?.length >= 0 && services?.map((service, index) => (
               <div key={index} className="bg-gradient-to-b from-white to-blue-50 rounded-2xl p-6 border border-blue-100 shadow-sm hover:shadow-lg transition-all group">
                 <div className="w-16 h-16 bg-blue-100 rounded-xl mb-6 flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors">
-                  {service.icon}
+                  {service?.icon}
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
-                <p className="text-gray-600">{service.description}</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">{service?.title}</h3>
+                <p className="text-gray-600">{service?.description}</p>
               </div>
             ))}
           </div>
@@ -244,9 +259,9 @@ const GraphicDesignPage = () => {
           </div>
           
           <div className="mt-12 text-center">
-            <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-700 text-white rounded-lg font-bold shadow-lg hover:from-blue-700 hover:to-indigo-800 transition-all">
+            <Link href="/portfolio" className="px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-700 text-white rounded-lg font-bold shadow-lg hover:from-blue-700 hover:to-indigo-800 transition-all">
               View Full Portfolio
-            </button>
+            </Link>
           </div>
         </div>
       </section>
@@ -278,28 +293,37 @@ const GraphicDesignPage = () => {
       </section>
 
       {/* Tools & Technologies */}
-      <section className="py-20 bg-gradient-to-r from-blue-50 to-indigo-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Design Tools We Use</h2>
-            <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-indigo-600 mx-auto rounded-full"></div>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto mt-6">
-              Professional tools to create stunning, high-quality designs
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            {tools.map((tool, index) => (
-              <div key={index} className="bg-white rounded-2xl p-6 border border-gray-200 text-center hover:shadow-md transition-shadow">
-                <div className="w-16 h-16 mx-auto mb-4 text-blue-600">
+       <section className="py-16 sm:py-20 bg-gradient-to-r from-blue-50 to-indigo-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Design Tools We Use</h2>
+          <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-indigo-600 mx-auto rounded-full mb-4" />
+          <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto">Professional tools we rely on to create polished, high-quality designs — from UI to motion and print.</p>
+        </div>
+
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 sm:gap-6">
+          {tools.map((tool, idx) => (
+            <div
+              key={idx}
+              role="group"
+              tabIndex={0}
+              aria-label={`${tool.name} — ${tool.label ?? ''}`}
+              title={`${tool.name}${tool.label ? ` — ${tool.label}` : ''}`}
+              className="bg-white border border-gray-200 rounded-2xl p-4 sm:p-5 flex flex-col items-center text-center shadow-sm hover:shadow-md focus:shadow-md transition-shadow transform hover:-translate-y-0.5 focus:-translate-y-0.5 outline-none focus-visible:ring-2 focus-visible:ring-indigo-300"
+            >
+              <div className="flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-white/30 to-white/10 backdrop-blur-sm mb-3">
+                <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r from-blue-50 to-indigo-50 text-blue-600">
                   {tool.icon}
                 </div>
-                <div className="text-lg font-medium text-gray-900">{tool.name}</div>
               </div>
-            ))}
-          </div>
+
+              <div className="text-sm sm:text-base font-semibold text-gray-900">{tool.name}</div>
+              <div className="text-xs sm:text-sm text-gray-500 mt-1">{tool.label}</div>
+            </div>
+          ))}
         </div>
-      </section>
+      </div>
+    </section>
 
       {/* Benefits */}
       <section className="py-20 bg-white">
@@ -387,14 +411,6 @@ const GraphicDesignPage = () => {
           <p className="text-xl max-w-3xl mx-auto mb-10">
             Let&apos;s collaborate to create stunning designs that communicate your brand story and captivate your audience.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <button className="px-8 py-4 bg-white text-blue-600 rounded-lg font-bold shadow-lg hover:bg-blue-50 transition-colors">
-              Start Your Project
-            </button>
-            <Link href="/contact" className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg font-bold hover:bg-white hover:text-blue-600 transition-colors">
-              Request Consultation
-            </Link>
-          </div>
         </div>
       </section>
     </div>

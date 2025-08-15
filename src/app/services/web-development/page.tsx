@@ -2,6 +2,7 @@
 'use client'
 import Link from 'next/link';
 import React from 'react';
+import { FaCloud, FaCode, FaDatabase, FaReact, FaServer } from 'react-icons/fa';
 import { HiLightBulb, HiOutlineDesktopComputer, HiOutlineDeviceMobile, HiOutlineGlobe, HiOutlineSearch, HiOutlineChartBar, HiOutlineShieldCheck, HiOutlineChat, HiOutlineDocumentText, HiOutlineTemplate, HiOutlinePencil, HiOutlineDocumentSearch } from 'react-icons/hi';
 import { HiOutlineRocketLaunch } from 'react-icons/hi2';
 
@@ -82,22 +83,22 @@ const WebDesignDevelopmentPage = () => {
     }
   ];
 
-  const technologies = [
-    { name: "React", category: "Frontend" },
-    { name: "Next.js", category: "Frontend" },
-    { name: "Wordpress", category: "Frontend" },
-    { name: "TypeScript", category: "Frontend" },
-    { name: "Tailwind CSS", category: "Frontend" },
-    { name: "Node.js", category: "Backend" },
-    { name: "Express", category: "Backend" },
-    { name: "MongoDB", category: "Database" },
-    { name: "PostgreSQL", category: "Database" },
-    { name: "GraphQL", category: "API" },
-    { name: "REST API", category: "API" },
-    { name: "AWS", category: "Hosting" },
-    { name: "Vercel", category: "Hosting" },
-    { name: "Hostinger", category: "Hosting" }
-  ];
+const technologies = [
+  { name: 'React', category: 'Frontend', icon: <FaReact /> },
+  { name: 'Next.js', category: 'Frontend', icon: <FaReact /> },
+  { name: 'Wordpress', category: 'Frontend', icon: <FaCode /> },
+  { name: 'TypeScript', category: 'Frontend', icon: <FaCode /> },
+  { name: 'Tailwind CSS', category: 'Frontend', icon: <FaCode /> },
+  { name: 'Node.js', category: 'Backend', icon: <FaServer /> },
+  { name: 'Express', category: 'Backend', icon: <FaServer /> },
+  { name: 'MongoDB', category: 'Database', icon: <FaDatabase /> },
+  { name: 'PostgreSQL', category: 'Database', icon: <FaDatabase /> },
+  { name: 'GraphQL', category: 'API', icon: <FaCode /> },
+  { name: 'REST API', category: 'API', icon: <FaCode /> },
+  { name: 'AWS', category: 'Hosting', icon: <FaCloud /> },
+  { name: 'Vercel', category: 'Hosting', icon: <FaCloud /> },
+  { name: 'Hostinger', category: 'Hosting', icon: <FaCloud /> }
+];
 
   const benefits = [
     {
@@ -133,7 +134,7 @@ const WebDesignDevelopmentPage = () => {
                 We create stunning, high-performance websites that engage your audience and drive business growth. From concept to launch, we handle every detail.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Link href="/services/porfolio" className="px-8 py-4 bg-white text-blue-600 rounded-lg font-bold shadow-lg hover:bg-blue-50 transition-colors">
+                <Link href="/services/portfolio" className="px-8 py-4 bg-white text-blue-600 rounded-lg font-bold shadow-lg hover:bg-blue-50 transition-colors">
                   View Our Portfolio
                 </Link>
               <a
@@ -144,7 +145,6 @@ const WebDesignDevelopmentPage = () => {
               >
                 Get Free Consultation
               </a>
-
               </div>
             </div>
             <div className="relative">
@@ -204,7 +204,7 @@ const WebDesignDevelopmentPage = () => {
       </section>
 
       {/* Our Process */}
-      <section className="py-20 bg-gradient-to-r from-blue-50 to-indigo-50">
+      {/* <section className="py-20 bg-gradient-to-r from-blue-50 to-indigo-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Web Development Process</h2>
@@ -215,7 +215,6 @@ const WebDesignDevelopmentPage = () => {
           </div>
           
           <div className="relative">
-            {/* Timeline line */}
             <div className="absolute left-4 md:left-1/2 md:-translate-x-1/2 top-0 h-full w-1 bg-blue-200 hidden md:block"></div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-y-12">
@@ -224,7 +223,6 @@ const WebDesignDevelopmentPage = () => {
                   key={index} 
                   className={`relative ${index % 2 === 0 ? 'md:pr-20 md:text-right' : 'md:pl-20 md:mt-40'}`}
                 >
-                  {/* Circle connector */}
                   <div className="absolute top-0 left-4 md:left-1/2 w-8 h-8 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full flex items-center justify-center text-white -translate-x-1/2 z-10">
                     {step?.icon}
                   </div>
@@ -241,31 +239,47 @@ const WebDesignDevelopmentPage = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Technologies */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Technologies We Use</h2>
-            <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-indigo-600 mx-auto rounded-full"></div>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto mt-6">
-              Modern tech stack for building high-performance, scalable web applications
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            {technologies && technologies?.length >= 0 && technologies?.map((tech, index) => (
-              <div key={index} className="bg-gradient-to-b from-white to-blue-50 rounded-2xl p-6 border border-blue-100 text-center hover:shadow-md transition-shadow">
-                <div className="text-2xl font-bold text-gray-900 mb-2">{tech.name}</div>
-                <div className="text-sm text-blue-600 bg-blue-100 rounded-full px-3 py-1 inline-block">
-                  {tech?.category}
-                </div>
-              </div>
-            ))}
-          </div>
+     <section className="py-24 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-extrabold text-gray-900 mb-4 tracking-tight sm:text-5xl">
+            Our Technology Stack
+          </h2>
+          <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 mx-auto rounded-full"></div>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto mt-6 leading-relaxed">
+            Cutting-edge technologies powering our high-performance, scalable web solutions
+          </p>
         </div>
-      </section>
+
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
+          {technologies?.map((tech, index) => (
+            <div
+              key={index}
+              className="relative bg-white rounded-2xl p-6 border border-gray-100 text-center 
+                         transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1 
+                         group overflow-hidden"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-indigo-50 opacity-0 
+                            group-hover:opacity-100 transition-opacity duration-300"></div>
+              
+              <div className="relative text-3xl text-blue-600 mb-4 flex justify-center">
+                {tech.icon}
+              </div>
+              <div className="relative text-xl font-semibold text-gray-900 mb-2">
+                {tech.name}
+              </div>
+              <div className="relative text-sm text-blue-600 bg-blue-100 rounded-full px-3 py-1 
+                            inline-block font-medium">
+                {tech.category}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
 
       {/* Benefits */}
       <section className="py-20 bg-gradient-to-r from-blue-50 to-indigo-50">
