@@ -49,7 +49,7 @@ const Header = () => {
             <HiPhone className="mr-1" />
             <span>+1 (123) 456-7890</span>
           </div>
-          <div className="text-sm text-gray-600">info@youridea.com</div>
+          <div className="text-sm text-gray-600">info@codemantra.com</div>
         </div>
         <div className="flex space-x-3">
           <a href="#" className="text-blue-600 hover:text-blue-800 transition-colors"><FaFacebookF size={16} /></a>
@@ -67,9 +67,9 @@ const Header = () => {
             <div className="flex items-center">
               <div className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white font-bold text-xl p-2 rounded-lg">
                 <span className="bg-white text-blue-700 rounded px-1 mr-1">YI</span>
-                YourIdea
+                Code Mantra 
               </div>
-              <span className="ml-2 text-xs font-light text-gray-500">SOLUTIONS</span>
+              <span className="ml-2 text-xs font-light text-gray-500">Technologies</span>
             </div>
           </div>
 
@@ -93,7 +93,13 @@ const Header = () => {
                 )}
               </div>
             ))}
-            <button className="ml-4 px-5 py-2 bg-gradient-to-r from-blue-600 to-indigo-700 text-white rounded-lg font-medium hover:from-blue-700 hover:to-indigo-800 transition-all shadow-md hover:shadow-lg">Get a Quote</button>
+              <a
+                href="tel:+911234567890"
+                className="ml-4 px-5 py-2 bg-gradient-to-r from-blue-600 to-indigo-700 text-white rounded-lg font-medium hover:from-blue-700 hover:to-indigo-800 transition-all shadow-md hover:shadow-lg flex items-center gap-2"
+              >
+                <HiPhone className="w-5 h-5" />
+                Call Us
+              </a>
           </nav>
 
           {/* Mobile menu button */}

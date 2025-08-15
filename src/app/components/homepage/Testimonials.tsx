@@ -9,7 +9,7 @@ const Testimonials = () => {
     id: 1,
     name: "Rajesh Kumar",
     role: "CEO, TechGrow Solutions",
-    content: "YourIdea Solutions made our website look new and professional. In just 3 months, our leads increased by 150%. Great work.",
+    content: "Code Mantra Technologies made our website look new and professional. In just 3 months, our leads increased by 150%. Great work.",
     rating: 5
   },
   {
@@ -23,7 +23,7 @@ const Testimonials = () => {
     id: 3,
     name: "Amit Verma",
     role: "Founder, TrendBazaar",
-    content: "Working with YourIdea helped our e-commerce business grow fast. Their marketing strategy doubled our sales.",
+    content: "Working with Code Mantra Technologies helped our e-commerce business grow fast. Their marketing strategy doubled our sales.",
     rating: 4
   }
 ];

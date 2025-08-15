@@ -13,7 +13,7 @@ const AboutHero = () => {
               Crafting Digital <span className="text-blue-600">Excellence</span> Since 2018
             </h1>
             <p className="text-xl text-gray-700 mb-10 max-w-2xl mx-auto lg:mx-0">
-              At YourIdea Solutions, we transform innovative ideas into powerful digital solutions. 
+              At Code Mantra Technologies, we transform innovative ideas into powerful digital solutions. 
               Discover our journey, values, and the passionate team behind our success.
             </p>
             <div className="flex flex-wrap justify-center lg:justify-start gap-4">

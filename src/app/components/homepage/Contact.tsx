@@ -1,6 +1,7 @@
 // src/components/Contact.jsx
 import React from 'react';
 import { HiMail, HiPhone, HiLocationMarker } from 'react-icons/hi';
+import ContactForm from '../contact/ContactForm';
 
 const Contact = () => {
   return (
@@ -52,7 +53,7 @@ const Contact = () => {
                 </div>
                 <div className="ml-4">
                   <h4 className="text-lg font-bold text-gray-900">Email Address</h4>
-                  <p className="text-gray-600">info@youridea.com</p>
+                  <p className="text-gray-600">info@codemantra.com</p>
                 </div>
               </div>
             </div>
@@ -77,53 +78,7 @@ const Contact = () => {
           </div>
           
           <div>
-            <div className="bg-white border border-gray-200 rounded-2xl shadow-lg p-8">
-              <form>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
-                    <input
-                      type="text"
-                      id="name"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 placeholder-gray-500"
-                      placeholder="John Doe"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
-                    <input
-                      type="email"
-                      id="email"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 placeholder-gray-500"
-                      placeholder="john@example.com"
-                    />
-                  </div>
-                </div>
-                <div className="mb-6">
-                  <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">Subject</label>
-                  <input
-                    type="text"
-                    id="subject"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 placeholder-gray-500"
-                    placeholder="How can we help?"
-                  />
-                </div>
-                <div className="mb-6">
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Message</label>
-                  <textarea
-                    id="message"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 placeholder-gray-500"
-                    placeholder="Your message here..."
-                  ></textarea>
-                </div>
-                <button
-                  type="submit"
-                  className="w-full px-6 py-4 bg-gradient-to-r from-blue-600 to-indigo-700 text-white rounded-lg font-medium shadow-lg hover:from-blue-700 hover:to-indigo-800 transition-all"
-                >
-                  Send Message
-                </button>
-              </form>
-            </div>
+              <ContactForm />
           </div>
         </div>
       </div>

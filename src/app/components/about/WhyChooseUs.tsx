@@ -31,7 +31,7 @@ const WhyChooseUs = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Why Choose YourIdea Solutions?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Why Choose Code Mantra Technologies?</h2>
             <div className="w-20 h-1 bg-blue-600 mb-6"></div>
             <p className="text-lg text-gray-600 mb-8">
               In a crowded marketplace, we stand out through our commitment to excellence, innovative approach, and client-centric philosophy.

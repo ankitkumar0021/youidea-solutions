@@ -2,7 +2,7 @@ import React from 'react';
 
 const History = () => {
   const milestones = [
-    { year: 2018, event: "YourIdea Solutions founded with a mission to transform digital experiences." },
+    { year: 2018, event: "Code Mantra Technologies founded with a mission to transform digital experiences." },
     { year: 2019, event: "Launched our first major e-commerce platform for a retail client." },
     { year: 2020, event: "Expanded services to include mobile app development and SEO." },
     { year: 2022, event: "Developed a custom CRM/ERP solution for a construction company." },

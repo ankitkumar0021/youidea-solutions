@@ -48,9 +48,9 @@ const Footer = () => {
             <div className="flex items-center mb-6">
               <div className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white font-bold text-xl p-2 rounded-lg">
                 <span className="bg-white text-blue-700 rounded px-1 mr-1">YI</span>
-                YourIdea
+                Code Mantra
               </div>
-              <span className="ml-2 text-xs font-light text-gray-400">SOLUTIONS</span>
+              <span className="ml-2 text-xs font-light text-gray-400">Technologies</span>
             </div>
             <p className="mb-6 text-gray-400">
               We deliver cutting-edge digital solutions that drive business growth and innovation. 
@@ -134,7 +134,7 @@ const Footer = () => {
                 <div className="bg-blue-800 p-2 rounded-full mr-3">
                   <FaEnvelope className="text-blue-300" size={16} />
                 </div>
-                <span className="text-gray-400">info@youridea.com</span>
+                <span className="text-gray-400">info@codemantra.com</span>
               </li>
             </ul>
             
@@ -157,7 +157,7 @@ const Footer = () => {
         {/* Copyright */}
         <div className="py-6 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-500 text-sm">
-            &copy; {new Date().getFullYear()} YourIdea Solutions. All rights reserved.
+            &copy; {new Date().getFullYear()} Code Mantra Technologies. All rights reserved.
           </p>
           <div className="mt-3 md:mt-0 flex space-x-4">
             {supportLinks.map((link, index) => (

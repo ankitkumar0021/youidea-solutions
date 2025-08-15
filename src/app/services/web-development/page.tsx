@@ -85,6 +85,7 @@ const WebDesignDevelopmentPage = () => {
   const technologies = [
     { name: "React", category: "Frontend" },
     { name: "Next.js", category: "Frontend" },
+    { name: "Wordpress", category: "Frontend" },
     { name: "TypeScript", category: "Frontend" },
     { name: "Tailwind CSS", category: "Frontend" },
     { name: "Node.js", category: "Backend" },
@@ -94,7 +95,8 @@ const WebDesignDevelopmentPage = () => {
     { name: "GraphQL", category: "API" },
     { name: "REST API", category: "API" },
     { name: "AWS", category: "Hosting" },
-    { name: "Vercel", category: "Hosting" }
+    { name: "Vercel", category: "Hosting" },
+    { name: "Hostinger", category: "Hosting" }
   ];
 
   const benefits = [
@@ -131,7 +133,7 @@ const WebDesignDevelopmentPage = () => {
                 We create stunning, high-performance websites that engage your audience and drive business growth. From concept to launch, we handle every detail.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Link href="/porfolio" className="px-8 py-4 bg-white text-blue-600 rounded-lg font-bold shadow-lg hover:bg-blue-50 transition-colors">
+                <Link href="/services/porfolio" className="px-8 py-4 bg-white text-blue-600 rounded-lg font-bold shadow-lg hover:bg-blue-50 transition-colors">
                   View Our Portfolio
                 </Link>
               <a
@@ -188,13 +190,13 @@ const WebDesignDevelopmentPage = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
+            {services && services?.length >= 0 && services?.map((service, index) => (
               <div key={index} className="bg-gradient-to-b from-white to-blue-50 rounded-2xl p-6 border border-blue-100 shadow-sm hover:shadow-lg transition-all group">
                 <div className="w-16 h-16 bg-blue-100 rounded-xl mb-6 flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors">
-                  {service.icon}
+                  {service?.icon}
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
-                <p className="text-gray-600">{service.description}</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">{service?.title}</h3>
+                <p className="text-gray-600">{service?.description}</p>
               </div>
             ))}
           </div>
@@ -217,32 +219,26 @@ const WebDesignDevelopmentPage = () => {
             <div className="absolute left-4 md:left-1/2 md:-translate-x-1/2 top-0 h-full w-1 bg-blue-200 hidden md:block"></div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-y-12">
-              {processSteps.map((step, index) => (
+              {processSteps && processSteps?.length >= 0 && processSteps?.map((step, index) => (
                 <div 
                   key={index} 
                   className={`relative ${index % 2 === 0 ? 'md:pr-20 md:text-right' : 'md:pl-20 md:mt-40'}`}
                 >
                   {/* Circle connector */}
                   <div className="absolute top-0 left-4 md:left-1/2 w-8 h-8 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full flex items-center justify-center text-white -translate-x-1/2 z-10">
-                    {step.icon}
+                    {step?.icon}
                   </div>
                   
                   <div className={`bg-white rounded-2xl p-6 shadow-md ${index % 2 === 0 ? 'md:mr-4' : 'md:ml-4'}`}>
                     <div className={`font-bold text-lg text-blue-600 mb-2 ${index % 2 === 0 ? 'md:text-right' : ''}`}>
                       Step {index + 1}
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">{step.title}</h3>
-                    <p className="text-gray-600">{step.description}</p>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">{step?.title}</h3>
+                    <p className="text-gray-600">{step?.description}</p>
                   </div>
                 </div>
               ))}
             </div>
-          </div>
-          
-          <div className="mt-20 text-center">
-            <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-700 text-white rounded-lg font-bold shadow-lg hover:from-blue-700 hover:to-indigo-800 transition-all">
-              Start Your Project Today
-            </button>
           </div>
         </div>
       </section>
@@ -259,11 +255,11 @@ const WebDesignDevelopmentPage = () => {
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            {technologies.map((tech, index) => (
+            {technologies && technologies?.length >= 0 && technologies?.map((tech, index) => (
               <div key={index} className="bg-gradient-to-b from-white to-blue-50 rounded-2xl p-6 border border-blue-100 text-center hover:shadow-md transition-shadow">
                 <div className="text-2xl font-bold text-gray-900 mb-2">{tech.name}</div>
                 <div className="text-sm text-blue-600 bg-blue-100 rounded-full px-3 py-1 inline-block">
-                  {tech.category}
+                  {tech?.category}
                 </div>
               </div>
             ))}
@@ -356,14 +352,6 @@ const WebDesignDevelopmentPage = () => {
           <p className="text-xl max-w-3xl mx-auto mb-10">
             Let&apos;s collaborate to create a website that not only looks stunning but also delivers measurable business results.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <button className="px-8 py-4 bg-white text-blue-600 rounded-lg font-bold shadow-lg hover:bg-blue-50 transition-colors">
-              Start Your Project
-            </button>
-            <button className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg font-bold hover:bg-white hover:text-blue-600 transition-colors">
-              Schedule Consultation
-            </button>
-          </div>
         </div>
       </section>
     </div>

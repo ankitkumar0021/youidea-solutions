@@ -31,7 +31,7 @@ const CompanyStory = () => {
           
           <div>
             <p className="text-lg text-gray-600 mb-8">
-              YourIdea Solutions was founded in 2018 by a team of passionate tech enthusiasts who believed that every business deserves access to cutting-edge digital solutions. What started as a small garage operation has grown into a full-service digital agency serving clients worldwide.
+              Code Mantra Technologies was founded in 2018 by a team of passionate tech enthusiasts who believed that every business deserves access to cutting-edge digital solutions. What started as a small garage operation has grown into a full-service digital agency serving clients worldwide.
             </p>
             
             <p className="text-lg text-gray-600 mb-8">

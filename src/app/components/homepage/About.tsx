@@ -22,10 +22,10 @@ const About = () => {
           </div>
           
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">About YourIdea Solutions</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">About Code Mantra Technologies</h2>
             <div className="w-20 h-1 bg-blue-600 mb-6"></div>
             <p className="text-lg text-gray-600 mb-8">
-              Founded in 2018, YourIdea Solutions has been at the forefront of digital transformation for businesses of all sizes. We believe in the power of technology to solve complex problems and create opportunities.
+              Founded in 2018, Code Mantra Technologies has been at the forefront of digital transformation for businesses of all sizes. We believe in the power of technology to solve complex problems and create opportunities.
             </p>
             <p className="text-lg text-gray-600 mb-12">
               Our mission is to deliver exceptional digital experiences that drive growth and innovation. We combine technical expertise with creative thinking to help our clients achieve their business goals.

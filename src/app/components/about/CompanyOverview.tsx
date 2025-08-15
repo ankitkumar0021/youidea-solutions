@@ -12,7 +12,7 @@ const CompanyOverview = () => {
                   <div className="text-center">
                     <div className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white font-bold text-xl p-2 rounded-lg inline-block mb-4">
                       <span className="bg-white text-blue-700 rounded px-1 mr-1">YI</span>
-                      YourIdea
+                      Code Mantra Technologies
                     </div>
                     <p className="text-gray-600">Innovative digital solutions since 2018</p>
                   </div>
@@ -26,7 +26,7 @@ const CompanyOverview = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Our Mission & Vision</h2>
             <div className="w-20 h-1 bg-blue-600 mb-6"></div>
             <p className="text-lg text-gray-600 mb-8">
-              Founded in 2018, YourIdea Solutions is dedicated to transforming businesses through innovative digital solutions. We leverage cutting-edge technology to solve complex challenges and create opportunities for growth.
+              Founded in 2018, Code Mantra Technologies is dedicated to transforming businesses through innovative digital solutions. We leverage cutting-edge technology to solve complex challenges and create opportunities for growth.
             </p>
             <p className="text-lg text-gray-600 mb-12">
               Our vision is to empower businesses worldwide with exceptional digital experiences that drive success. We combine creativity, technical expertise, and a client-centric approach to deliver results that matter.

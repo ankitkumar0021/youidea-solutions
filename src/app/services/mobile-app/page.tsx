@@ -186,7 +186,7 @@ const MobileAppDevelopmentPage = () => {
                   </div>
                   <div className="bg-gradient-to-br from-blue-100 to-indigo-100 rounded-2xl p-6 h-96 flex flex-col">
                     <div className="flex justify-between items-center mb-6">
-                      <div className="text-xl font-bold text-gray-800">YourIdea App</div>
+                      <div className="text-xl font-bold text-gray-800">Code Mantra App</div>
                       <div className="flex space-x-2">
                         <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white">
                           <HiOutlineDeviceMobile className="w-4 h-4" />
@@ -197,7 +197,7 @@ const MobileAppDevelopmentPage = () => {
                       </div>
                     </div>
                     <div className="grid grid-cols-4 gap-4 mb-6">
-                      {[1, 2, 3, 4].map((item) => (
+                      {[1, 2, 3, 4]?.map((item) => (
                         <div key={item} className="bg-white rounded-xl p-3 aspect-square flex items-center justify-center">
                           <div className="w-8 h-8 bg-blue-100 rounded-lg"></div>
                         </div>
@@ -234,13 +234,13 @@ const MobileAppDevelopmentPage = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
+            {services && services.length >= 0 && services.map((service, index) => (
               <div key={index} className="bg-gradient-to-b from-white to-blue-50 rounded-2xl p-6 border border-blue-100 shadow-sm hover:shadow-lg transition-all group">
                 <div className="w-16 h-16 bg-blue-100 rounded-xl mb-6 flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors">
-                  {service.icon}
+                  {service?.icon}
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
-                <p className="text-gray-600">{service.description}</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">{service?.title}</h3>
+                <p className="text-gray-600">{service?.description}</p>
               </div>
             ))}
           </div>
@@ -425,14 +425,6 @@ const MobileAppDevelopmentPage = () => {
           <p className="text-xl max-w-3xl mx-auto mb-10">
             Let&apos;s turn your app idea into reality with our expert mobile development services.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <button className="px-8 py-4 bg-white text-blue-600 rounded-lg font-bold shadow-lg hover:bg-blue-50 transition-colors">
-              Start Your Project
-            </button>
-            <button className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg font-bold hover:bg-white hover:text-blue-600 transition-colors">
-              Get Free Consultation
-            </button>
-          </div>
         </div>
       </section>
     </div>

@@ -244,7 +244,7 @@ const CareerPage = () => {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Join YourIdea Solutions?</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Join Code Mantra Technologies?</h2>
             <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-indigo-600 mx-auto rounded-full"></div>
           </div>
           
@@ -273,7 +273,7 @@ const CareerPage = () => {
       <section className="py-16 bg-gradient-to-r from-blue-50 to-indigo-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Life at YourIdea</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Life at Code Mantra Technologies</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               We believe in creating an environment where everyone can thrive and do their best work.
             </p>
@@ -283,7 +283,7 @@ const CareerPage = () => {
             <div className="bg-white rounded-2xl p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Our Culture</h3>
               <p className="text-gray-600 mb-6">
-                At YourIdea Solutions, we foster a culture of collaboration, innovation, and continuous learning. 
+                At Code Mantra Technologies, we foster a culture of collaboration, innovation, and continuous learning. 
                 We believe that great ideas can come from anywhere, and we encourage every team member to contribute 
                 their unique perspective.
               </p>
