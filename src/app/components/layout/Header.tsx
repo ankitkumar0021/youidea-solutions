@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { HiMenu, HiX, HiPhone, HiChevronDown } from 'react-icons/hi';
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
+import ImageComponent from '../ui/ImageComponent';
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -63,15 +64,11 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           {/* Logo */}
-          <div className="flex-shrink-0 flex items-center">
-            <div className="flex items-center">
-              <div className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white font-bold text-xl p-2 rounded-lg">
-                <span className="bg-white text-blue-700 rounded px-1 mr-1">YI</span>
-                Code Mantra 
-              </div>
-              <span className="ml-2 text-xs font-light text-gray-500">Technologies</span>
+          <div className="flex items-center space-x-2 w-24 h-16 overflow-hidden">
+              <Link href={`/`} className="relative block w-full h-full" aria-label={`Open ${`RK Netlinks`}`}>
+                  <ImageComponent url={`/home/logo.png`} img_title={`logo`} object_cover={true} />
+              </Link>
             </div>
-          </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-1">

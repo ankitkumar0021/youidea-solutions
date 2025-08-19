@@ -201,8 +201,8 @@ const tools: Tool[] = [
       </div>
 
       {/* Blobs - hidden on small screens to avoid layout issues */}
-      <div className="hidden md:block absolute -top-6 -right-6 w-32 h-32 bg-yellow-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob" />
-      <div className="hidden md:block absolute -bottom-8 -left-6 w-40 h-40 bg-blue-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000" />
+      <div className="hidden md:block " />
+      <div className="hidden md:block " />
     </div>
           </div>
         </div>

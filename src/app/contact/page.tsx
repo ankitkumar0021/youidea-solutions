@@ -3,6 +3,7 @@ import React from 'react';
 import { HiMail, HiPhone, HiLocationMarker, HiOutlinePaperAirplane } from 'react-icons/hi';
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 import ContactForm from '../components/contact/ContactForm';
+import Head from 'next/head';
 
 const ContactPage: React.FC = () => {
   const contactInfo = [
@@ -25,6 +26,11 @@ const ContactPage: React.FC = () => {
   ];
 
   return (
+    <>
+    <Head>
+        <title>Contact Us | Code Mantra Technologies</title>
+        <meta name="description" content="Get in touch with our team for web design, mobile app development, and Video Editing" />
+      </Head>
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-indigo-50">
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20 md:mt-16">
@@ -131,6 +137,7 @@ const ContactPage: React.FC = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 
