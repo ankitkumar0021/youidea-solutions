@@ -1,12 +1,11 @@
-// src/components/Portfolio.tsx
 'use client'
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { HiExternalLink } from 'react-icons/hi';
 import ImageComponent from '../components/ui/ImageComponent';
+import Head from 'next/head';
 
 // Define types
-type ProjectCategory = 'web' | 'mobile' | 'ecommerce' | 'branding' | 'erp' | 'seo' | 'marketing';
+type ProjectCategory = 'web' | 'mobile' | 'ecommerce' | 'branding' | 'erp' | 'seo' | 'marketing' | 'graphic' | 'logo' | 'video';
 
 interface Project {
   id: number;
@@ -32,9 +31,10 @@ const Portfolio = () => {
     { name: 'Mobile Apps', value: 'mobile' },
     { name: 'E-Commerce', value: 'ecommerce' },
     { name: 'Branding', value: 'branding' },
-    { name: 'Construction ERP', value: 'erp' },
     { name: 'SEO', value: 'seo' },
-    { name: 'Marketing', value: 'marketing' },
+    { name: 'Video Editing', value: 'video' },
+    { name: 'Graphic Design', value: 'graphic' },
+    { name: 'Logo Design', value: 'logo' },
   ];
   
   const projects: Project[] = [
@@ -55,12 +55,27 @@ const Portfolio = () => {
     mobile: 'bg-purple-100 text-purple-800',
     ecommerce: 'bg-green-100 text-green-800',
     branding: 'bg-yellow-100 text-yellow-800',
-    erp: 'bg-red-100 text-red-800',
+    erp: 'bg-gray-100 text-gray-800',
     seo: 'bg-teal-100 text-teal-800',
-    marketing: 'bg-pink-100 text-pink-800'
+    marketing: 'bg-orange-100 text-orange-800',
+    graphic: 'bg-pink-100 text-pink-800',
+    logo: 'bg-red-100 text-red-800',
+    video: 'bg-indigo-100 text-indigo-800'
   };
 
   return (
+    <>
+    <Head>
+      <title>Portfolio | Code Mantra Technologies — Case Studies & Projects</title>
+      <meta name="description" content="View our portfolio and case studies: websites, apps and e-commerce projects with results and client testimonials." />
+      <meta name="keywords" content="portfolio web design, case studies, web development projects, app development portfolio, client testimonials Code Mantra" />
+      <link rel="canonical" href="https://www.mycodemantra.com/portfolio" />
+
+      <meta property="og:title" content="Portfolio | Code Mantra Technologies" />
+      <meta property="og:description" content="Successful projects and case studies — see design, tech stack and results for each client." />
+      {/* <meta property="og:image" content="https://www.mycodemantra.com/images/og-portfolio.jpg" /> */}
+      <meta name="twitter:card" content="summary_large_image" />
+   </Head>
     <section id="portfolio" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 md:mt-12">
         <div className="text-center mb-16">
@@ -117,7 +132,7 @@ const Portfolio = () => {
                   <span className={`inline-block px-3 py-1 text-xs font-semibold rounded-full mb-3 ${categoryColors[project.category]}`}>{filters.find(f => f.value === project.category)?.name}</span>
                   <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">{project.title}</h3>
                   <p className="text-gray-600 mb-4">{project.description}</p>
-                  <a href="#" className="inline-flex items-center text-blue-600 font-medium hover:text-blue-800 transition-colors group-hover:underline">View Project <HiExternalLink className="ml-2" /></a>
+                  {/* <a href="#" className="inline-flex items-center text-blue-600 font-medium hover:text-blue-800 transition-colors group-hover:underline">View Project <HiExternalLink className="ml-2" /></a> */}
                 </div>
               </div>
             ))}
@@ -132,6 +147,8 @@ const Portfolio = () => {
         )}
       </div>
     </section>
+    
+</>
   );
 };
 

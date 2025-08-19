@@ -7,16 +7,11 @@ import Head from 'next/head';
 
 const ContactPage: React.FC = () => {
   const contactInfo = [
-    { icon: <HiLocationMarker className="w-6 h-6" />, title: 'Our Location', details: '123 Business Street, Tech City, TC 10001', color: 'bg-blue-100 text-blue-600' },
-    { icon: <HiPhone className="w-6 h-6" />, title: 'Phone Number', details: '+1 (123) 456-7890', color: 'bg-green-100 text-green-600' },
-    { icon: <HiMail className="w-6 h-6" />, title: 'Email Address', details: 'info@codemantra.com', color: 'bg-purple-100 text-purple-600' }
+    { icon: <HiLocationMarker className="w-6 h-6" />, title: 'Our Location', details: '3rd Floor, JOP Plaza, 305, Sector 18, Noida, Uttar Pradesh, 201301', color: 'bg-blue-100 text-blue-600' },
+    { icon: <HiPhone className="w-6 h-6" />, title: 'Phone Number', details: '+91 9315235323', color: 'bg-green-100 text-green-600' },
+    { icon: <HiMail className="w-6 h-6" />, title: 'Email Address', details: 'codemantratechnologies@gmail.com', color: 'bg-purple-100 text-purple-600' }
   ];
 
-  const businessHours = [
-    { day: 'Monday - Friday', hours: '9:00 AM - 6:00 PM' },
-    { day: 'Saturday', hours: '10:00 AM - 4:00 PM' },
-    { day: 'Sunday', hours: 'Closed' }
-  ];
 
   const socialLinks = [
     { icon: <FaFacebookF />, url: '#', color: 'bg-blue-600 hover:bg-blue-700' },
@@ -27,7 +22,7 @@ const ContactPage: React.FC = () => {
 
   return (
     <>
-    <Head>
+      <Head>
         <title>Contact Us | Code Mantra Technologies</title>
         <meta name="description" content="Get in touch with our team for web design, mobile app development, and Video Editing" />
       </Head>
@@ -62,14 +57,7 @@ const ContactPage: React.FC = () => {
                 ))}
               </div>
 
-              <div className="mb-12">
-                <h3 className="text-lg font-bold text-gray-900 mb-4">Business Hours</h3>
-                <ul className="space-y-3">
-                  {businessHours.map((time, index) => (
-                    <li key={index} className="flex justify-between text-gray-600"><span>{time.day}</span><span>{time.hours}</span></li>
-                  ))}
-                </ul>
-              </div>
+            
 
               <div>
                 <h3 className="text-lg font-bold text-gray-900 mb-4">Follow Us</h3>

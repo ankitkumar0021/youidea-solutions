@@ -5,6 +5,7 @@ import { FaApple, FaAndroid, FaReact } from 'react-icons/fa';
 import { SiIonic, SiSwift, SiKotlin } from 'react-icons/si';
 import { FaFlutter } from 'react-icons/fa6';
 import Link from 'next/link';
+import Head from 'next/head';
 
 const MobileAppDevelopmentPage = () => {
   const services = [
@@ -141,6 +142,17 @@ const MobileAppDevelopmentPage = () => {
   ];
 
   return (
+    <>
+    <Head>
+  <title>Mobile App Development | Code Mantra Technologies</title>
+  <meta name="description" content="Native & cross-platform mobile app development for Android and iOS. UI/UX, backend APIs and app publishing support." />
+  <link rel="canonical" href="https://www.mycodemantra.com/services/mobile-app-development" />
+  <meta name="keywords" content="mobile app development, Android app development, iOS app development, React Native, Flutter, app backend, app publishing services" />
+  <meta property="og:title" content="Mobile App Development | Code Mantra Technologies" />
+  <meta property="og:description" content="We build scalable mobile apps — React Native, Flutter, Swift, Kotlin. From idea to Play Store & App Store." />
+  {/* <meta property="og:image" content="https://www.mycodemantra.com/images/og-mobileapp.jpg" /> */}
+  <meta name="twitter:card" content="summary_large_image" />
+</Head>
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-indigo-50">
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20 md:mt-16">
@@ -428,6 +440,7 @@ const MobileAppDevelopmentPage = () => {
         </div>
       </section>
     </div>
+</>
   );
 };
 

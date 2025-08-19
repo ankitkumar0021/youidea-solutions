@@ -1,34 +1,34 @@
-// src/components/Footer.jsx
+import Link from 'next/link';
 import React from 'react';
-import { 
-  FaPhone, 
+import {  
   FaEnvelope, 
   FaMapMarkerAlt, 
   FaFacebookF, 
   FaTwitter, 
   FaInstagram, 
   FaLinkedinIn,
-  FaArrowRight
+  FaArrowRight,
+  FaPhoneAlt
 } from 'react-icons/fa';
+import ImageComponent from '../ui/ImageComponent';
 
 const Footer = () => {
   const services = [
-    'Web Design & Development',
-    'Mobile App Development',
-    'E-Commerce Development',
-    'Graphic Design',
-    'Video Editing',
-    'SEO Services',
-    'Digital Marketing',
-    'Logo Design'
+    { name: 'Web Design & Development', href: '/services/web-development' },
+    { name: 'Mobile App Development', href: '/services/mobile-app' },
+    { name: 'E-Commerce Development', href: '/services/ecommerce' },
+    { name: 'Graphic Design', href: '/services/graphic-design' },
+    { name: 'Video Editing', href: '/services/video-editing' },
+    { name: 'SEO Services', href: '/services/seo' },
+    { name: 'Logo Design', href: '/services/logo-design' }
   ];
 
   const companyLinks = [
     { name: 'About Us', href: '/about' },
     { name: 'Services', href: '/services' },
-    { name: 'Graphic Design', href: '/graphics' },
     { name: 'Portfolio', href: '/portfolio' },
-    { name: 'Reviews', href: '/reviews' },
+    { name: 'Career', href: '/career' },
+    { name: 'Contact Us', href: '/contact' },
   ];
 
   const supportLinks = [
@@ -45,16 +45,13 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12">
           {/* Company Info */}
           <div>
-            <div className="flex items-center mb-6">
-              <div className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white font-bold text-xl p-2 rounded-lg">
-                <span className="bg-white text-blue-700 rounded px-1 mr-1">YI</span>
-                Code Mantra
-              </div>
-              <span className="ml-2 text-xs font-light text-gray-400">Technologies</span>
+            <div className="flex items-center space-x-2 w-24 h-16 overflow-hidden">
+              <Link href={`/`} className="relative block w-full h-full" aria-label={`Open ${`RK Netlinks`}`}>
+                  <ImageComponent url={`/home/logo.png`} img_title={`logo`} object_cover={true} />
+              </Link>
             </div>
-            <p className="mb-6 text-gray-400">
-              We deliver cutting-edge digital solutions that drive business growth and innovation. 
-              Transforming your ideas into reality with our expertise.
+            <p className="mb-6 text-white">
+              Code Mantra Technologies is a leading provider of web design, mobile app development, and video editing services. We are dedicated to delivering high-quality solutions that help businesses succeed online.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="bg-blue-700 hover:bg-blue-600 text-white p-2 rounded-full transition-colors">
@@ -80,13 +77,13 @@ const Footer = () => {
             <ul className="space-y-3">
               {services.map((service, index) => (
                 <li key={index} className="flex items-center">
-                  <FaArrowRight className="text-blue-400 mr-3 text-xs" />
-                  <a 
-                    href="#services" 
-                    className="text-gray-400 hover:text-white transition-colors"
+                  <FaArrowRight className="text-white mr-3 text-xs" />
+                  <Link 
+                    href={service.href} 
+                    className="text-white hover:text-gray-300 transition-colors"
                   >
-                    {service}
-                  </a>
+                    {service.name}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -100,10 +97,10 @@ const Footer = () => {
             <ul className="space-y-3">
               {companyLinks.map((link, index) => (
                 <li key={index} className="flex items-center">
-                  <FaArrowRight className="text-blue-400 mr-3 text-xs" />
+                  <FaArrowRight className="text-white mr-3 text-xs" />
                   <a 
                     href={link.href} 
-                    className="text-gray-400 hover:text-white transition-colors"
+                    className="text-white hover:text-gray-300 transition-colors"
                   >
                     {link.name}
                   </a>
@@ -120,51 +117,45 @@ const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-start">
                 <div className="bg-blue-800 p-2 rounded-full mr-3 mt-1">
-                  <FaMapMarkerAlt className="text-blue-300" size={16} />
+                  <FaMapMarkerAlt className="text-white" size={16} />
                 </div>
-                <span className="text-gray-400">Sector-2, Greater Noida West, 201306</span>
+                <span className="text-white">3rd Floor, JOP Plaza, 305,
+                  Sector 18, Noida,
+                  Uttar Pradesh, 201301</span>
+              </li>
+              <li className="flex items-start">
+                <div className="bg-blue-800 p-2 rounded-full mr-3 mt-1">
+                  <FaMapMarkerAlt className="text-white" size={16} />
+                </div>
+                <span className="text-white">Sector-2, Greater Noida West, 201306, Uttar Pradesh</span>
               </li>
               <li className="flex items-center">
                 <div className="bg-blue-800 p-2 rounded-full mr-3">
-                  <FaPhone className="text-blue-300" size={16} />
+                  <FaPhoneAlt  className="text-white" size={16} />
                 </div>
-                <span className="text-gray-400">9315235323</span>
+                <span className="text-white">9315235323</span>
               </li>
               <li className="flex items-center">
                 <div className="bg-blue-800 p-2 rounded-full mr-3">
-                  <FaEnvelope className="text-blue-300" size={16} />
+                  <FaEnvelope className="text-white" size={16} />
                 </div>
-                <span className="text-gray-400">info@codemantra.com</span>
+                <span className="text-white">codemantratechnologies@gmail.com</span>
               </li>
             </ul>
-            
-            {/* <div className="mt-8">
-              <h4 className="text-white mb-3">Subscribe to Newsletter</h4>
-              <div className="flex">
-                <input 
-                  type="email" 
-                  placeholder="Your email" 
-                  className="px-4 py-2 rounded-l-lg bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 w-full"
-                />
-                <button className="bg-gradient-to-r from-blue-600 to-indigo-700 hover:from-blue-700 hover:to-indigo-800 text-white px-4 py-2 rounded-r-lg transition-all">
-                  Subscribe
-                </button>
-              </div>
-            </div> */}
           </div>
         </div>
 
         {/* Copyright */}
         <div className="py-6 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-500 text-sm">
+          <p className="text-white text-sm">
             &copy; {new Date().getFullYear()} Code Mantra Technologies. All rights reserved.
           </p>
           <div className="mt-3 md:mt-0 flex space-x-4">
-            {supportLinks.map((link, index) => (
+            {supportLinks && supportLinks?.length >= 0 && supportLinks?.map((link, index) => (
               <a 
                 key={index}
                 href={link.href} 
-                className="text-gray-500 hover:text-gray-300 text-sm transition-colors"
+                className="text-white hover:text-gray-300 text-sm transition-colors"
               >
                 {link.name}
               </a>

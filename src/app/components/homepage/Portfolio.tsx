@@ -93,7 +93,7 @@ const Portfolio: React.FC = () => {
 										<span className="inline-block px-3 py-1 text-xs font-semibold text-blue-600 bg-blue-100 rounded-full mb-3">{project.category}</span>
 										<h3 className="text-xl font-bold text-gray-900 mb-2">{project.title}</h3>
 										<p className="text-gray-600 mb-4">{project.description}</p>
-										<a href="#" className="text-blue-600 font-medium flex items-center hover:text-blue-800">View Project <HiExternalLink className="ml-2" /></a>
+										{/* <a href="#" className="text-blue-600 font-medium flex items-center hover:text-blue-800">View Project <HiExternalLink className="ml-2" /></a> */}
 									</div>
 								</div>
 							);

@@ -53,7 +53,7 @@ const Contact = () => {
                 </div>
                 <div className="ml-4">
                   <h4 className="text-lg font-bold text-gray-900">Email Address</h4>
-                  <p className="text-gray-600">info@codemantra.com</p>
+                  <p className="text-gray-600">codemantratechnologies@gmail.com</p>
                 </div>
               </div>
             </div>

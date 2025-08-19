@@ -1,4 +1,5 @@
 // src/pages/services/seo-services.tsx
+import Head from 'next/head';
 import Link from 'next/link';
 import React from 'react';
 import { HiOutlineSearch, HiOutlineChartBar, HiOutlineDocumentText, HiOutlineGlobe, HiOutlineDeviceMobile, HiOutlineChat, HiOutlineLightBulb, HiOutlinePencil, HiOutlineEye, HiOutlineRefresh, HiOutlineThumbUp } from 'react-icons/hi';
@@ -97,6 +98,19 @@ const SEOServicesPage = () => {
   ];
 
   return (
+    <>
+    <Head>
+      <title>SEO Services | Code Mantra Technologies</title>
+      <meta name="description" content="SEO services: technical SEO, on-page, content strategy and local SEO to help you rank higher and get more organic traffic." />
+      <meta name="keywords" content="SEO services, technical SEO, on-page SEO, local SEO, content strategy, SEO audit, organic traffic growth" />
+      <link rel="canonical" href="https://www.mycodemantra.com/services/seo" />
+
+      <meta property="og:title" content="SEO Services | Code Mantra Technologies" />
+      <meta property="og:description" content="Technical SEO audits, on-page optimisation and content marketing to boost organic growth." />
+      {/* <meta property="og:image" content="https://www.mycodemantra.com/images/og-seo.jpg" /> */}
+      <meta name="twitter:card" content="summary_large_image" />
+    </Head>
+
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-indigo-50">
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20 md:mt-16">
@@ -323,6 +337,7 @@ const SEOServicesPage = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

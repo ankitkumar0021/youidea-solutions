@@ -1,4 +1,5 @@
 // src/pages/services/video-editing.tsx
+import Head from 'next/head';
 import Link from 'next/link';
 import React from 'react';
 import { 
@@ -111,6 +112,19 @@ const VideoEditingPage = () => {
   ];
 
   return (
+    <>
+     <Head>
+      <title>Video Editing & Production | Code Mantra Technologies</title>
+      <meta name="description" content="Professional video editing, short-form videos, YouTube editing and promotional video production to increase engagement." />
+      <meta name="keywords" content="video editing, youtube video editing, short form videos, promo video production, corporate video editing, video editing services India" />
+      <link rel="canonical" href="https://www.mycodemantra.com/services/video-editing" />
+
+      <meta property="og:title" content="Video Editing & Production | Code Mantra Technologies" />
+      <meta property="og:description" content="High-quality editing for ads, social media shorts and corporate videos. Fast turnaround and storytelling-first approach." />
+      {/* <meta property="og:image" content="https://www.mycodemantra.com/images/og-video.jpg" /> */}
+      <meta name="twitter:card" content="summary_large_image" />
+    </Head>
+
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-indigo-50">
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20 md:mt-16">
@@ -397,6 +411,7 @@ const VideoEditingPage = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

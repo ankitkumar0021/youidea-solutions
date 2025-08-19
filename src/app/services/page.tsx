@@ -7,6 +7,7 @@ import ProcessSection from '../components/services/ProcessSection'
 import ServiceTestimonials from '../components/services/ServiceTestimonials'
 import ServiceFAQ from '../components/services/ServiceFAQ'
 import ServiceCTA from '../components/services/ServiceCTA'
+import Head from 'next/head'
 
 export default function ServicesPage() {
   // can be string or number
@@ -54,6 +55,17 @@ export default function ServicesPage() {
   ]
 
   return (
+    <>
+    <Head>
+  <title>Services | Code Mantra Technologies</title>
+  <meta name="description" content="Our services: Web Design, Mobile App Development, E-commerce Development, SEO, Video Editing and Custom Software solutions." />
+  <link rel="canonical" href="https://www.mycodemantra.com/services" />
+  <meta name="keywords" content="web design services, mobile app services, e-commerce development, SEO services, video editing services, custom software India" />  
+  <meta property="og:title" content="Services | Code Mantra Technologies" />
+  <meta property="og:description" content="Explore Code Mantra's services: websites, mobile apps, e-commerce, SEO and video editing." />
+  {/* <meta property="og:image" content="https://www.mycodemantra.com/images/og-services.jpg" /> */}
+  <meta name="twitter:card" content="summary_large_image" />
+</Head>
     <div className="min-h-screen flex flex-col bg-gradient-to-b from-blue-50 to-indigo-50">
       <main className="flex-grow">
         <ServicesHero />
@@ -82,5 +94,7 @@ export default function ServicesPage() {
         <ServiceCTA />
       </main>
     </div>
+    
+</>
   )
 }

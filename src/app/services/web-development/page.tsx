@@ -1,5 +1,6 @@
 // src/pages/services/web-design-development.tsx
 'use client'
+import Head from 'next/head';
 import Link from 'next/link';
 import React from 'react';
 import { FaCloud, FaCode, FaDatabase, FaReact, FaServer } from 'react-icons/fa';
@@ -120,6 +121,18 @@ const technologies = [
   ];
 
   return (
+    <>
+    <Head>
+  <title>Web Design Services | Code Mantra Technologies</title>
+  <meta name="description" content="Professional responsive web design focused on conversions — landing pages, corporate sites, and custom UI/UX. Get a free design consult." />
+  <link rel="canonical" href="https://www.mycodemantra.com/services/web-design" />
+  <meta name="keywords" content="web design, responsive web design, UI UX design, landing page design, corporate website design, website redesign India" />
+  <meta property="og:title" content="Web Design Services | Code Mantra Technologies" />
+  <meta property="og:description" content="Custom responsive web design, UX-first interfaces and performance-optimized builds to grow your business." />
+  {/* <meta property="og:image" content="https://www.mycodemantra.com/images/og-webdesign.jpg" /> */}
+  <meta name="twitter:card" content="summary_large_image" />
+</Head>
+
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-indigo-50">
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20">
@@ -369,6 +382,7 @@ const technologies = [
         </div>
       </section>
     </div>
+    </>
   );
 };
 

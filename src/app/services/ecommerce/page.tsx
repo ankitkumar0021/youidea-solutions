@@ -6,6 +6,7 @@ import { SiWoocommerce, SiBigcommerce } from 'react-icons/si';
 import { HiOutlineRocketLaunch } from 'react-icons/hi2';
 import Link from 'next/link';
 import { FiActivity, FiHeadphones, FiWatch } from 'react-icons/fi';
+import Head from 'next/head';
 
 const EcommerceDevelopmentPage = () => {
   const services = [
@@ -178,6 +179,18 @@ const EcommerceDevelopmentPage = () => {
   ];
 
   return (
+    <>
+    <Head>
+      <title>E-Commerce Development | Code Mantra Technologies</title>
+      <meta name="description" content="E-commerce websites & marketplaces: WooCommerce, Shopify, custom React/Next e-shops with payment gateway integration and optimised checkout." />
+      <meta name="keywords" content="ecommerce development, Shopify development, WooCommerce, online store development, payment gateway integration, ecommerce website India" />
+      <link rel="canonical" href="https://www.mycodemantra.com/services/ecommerce" />
+
+      <meta property="og:title" content="E-Commerce Development | Code Mantra Technologies" />
+      <meta property="og:description" content="Build fast, secure and conversion-focused online stores. Integrations, inventory, and payments." />
+      {/* <meta property="og:image" content="https://www.mycodemantra.com/images/og-ecommerce.jpg" /> */}
+      <meta name="twitter:card" content="summary_large_image" />
+    </Head>
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-indigo-50">
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20 md:mt-16">
@@ -470,7 +483,8 @@ const EcommerceDevelopmentPage = () => {
           </p>
         </div>
       </section>
-    </div>
+    </div>  
+</>
   );
 };
 

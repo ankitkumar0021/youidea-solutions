@@ -50,7 +50,7 @@ const Header = () => {
             <HiPhone className="mr-1" />
             <span>+1 (123) 456-7890</span>
           </div>
-          <div className="text-sm text-gray-600">info@codemantra.com</div>
+          <div className="text-sm text-gray-600">codemantratechnologies@gmail.com</div>
         </div>
         <div className="flex space-x-3">
           <a href="#" className="text-blue-600 hover:text-blue-800 transition-colors"><FaFacebookF size={16} /></a>
