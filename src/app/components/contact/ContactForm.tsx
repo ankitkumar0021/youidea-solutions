@@ -1,6 +1,7 @@
 'use client';
 import React, { useRef, useState } from 'react';
 import { useFormik } from 'formik';
+import * as Yup from 'yup';
 import { HiOutlinePaperAirplane } from 'react-icons/hi';
 
 interface FormDataState {
@@ -11,14 +12,7 @@ interface FormDataState {
 }
 
 interface ContactFormProps {
-  /**
-   * Formspree endpoint URL. Example: "https://formspree.io/f/xvgqyvzn"
-   * If not provided, the default below will be used.
-   */
   endpoint?: string;
-  /**
-   * Optional callback fired after successful submit.
-   */
   onSuccess?: () => void;
 }
 
@@ -34,6 +28,29 @@ function getErrorMessage(err: unknown): string {
 // Default endpoint
 const DEFAULT_FORMSPREE_ENDPOINT = 'https://formspree.io/f/xvgqyvzn';
 
+// Yup validation schema
+const validationSchema = Yup.object({
+  name: Yup.string()
+    .trim()
+    .min(2, 'Name must be at least 2 characters.')
+    .max(50, 'Name must be 50 characters or less.')
+    .required('Please enter your name.'),
+  email: Yup.string()
+    .trim()
+    .email('Please enter a valid email address.')
+    .required('Email is required.'),
+  subject: Yup.string()
+    .trim()
+    .min(3, 'Subject must be at least 3 characters.')
+    .max(150, 'Subject must be 150 characters or less.')
+    .required('Please provide a subject.'),
+  message: Yup.string()
+    .trim()
+    .min(10, 'Message must be at least 10 characters.')
+    .max(5000, 'Message is too long.')
+    .required('Please write your message.'),
+});
+
 const ContactForm: React.FC<ContactFormProps> = ({ endpoint = DEFAULT_FORMSPREE_ENDPOINT, onSuccess }) => {
   const formRef = useRef<HTMLFormElement | null>(null);
   const [submitSuccess, setSubmitSuccess] = useState<boolean>(false);
@@ -47,7 +64,9 @@ const ContactForm: React.FC<ContactFormProps> = ({ endpoint = DEFAULT_FORMSPREE_
       subject: '',
       message: '',
     },
-    validationSchema: "",
+    validationSchema,
+    validateOnBlur: true,
+    validateOnChange: true,
     onSubmit: async (values, { setSubmitting, resetForm }) => {
       setSubmitError('');
       setSubmitSuccess(false);
@@ -182,15 +201,12 @@ const ContactForm: React.FC<ContactFormProps> = ({ endpoint = DEFAULT_FORMSPREE_
               value={formik.values.name}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
-              className={`w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors placeholder-gray-600 placeholder-opacity-100 text-gray-700 ${
-                formik.touched.name && formik.errors.name ? 'border-red-500' : ''
-              }`}
+              aria-invalid={Boolean(formik.touched.name && formik.errors.name)}
+              className={`w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors placeholder-gray-600 placeholder-opacity-100 text-gray-700 ${formik.touched.name && formik.errors.name ? 'border-red-500' : ''}`}
               placeholder="John Doe"
               aria-label="Your name"
             />
-            {formik.touched.name && formik.errors.name && (
-              <p className="text-red-500 text-sm mt-1">{formik.errors.name}</p>
-            )}
+            {formik.touched.name && formik.errors.name && <p className="text-red-500 text-sm mt-1">{formik.errors.name}</p>}
           </div>
 
           <div>
@@ -202,15 +218,12 @@ const ContactForm: React.FC<ContactFormProps> = ({ endpoint = DEFAULT_FORMSPREE_
               value={formik.values.email}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
-              className={`w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors placeholder-gray-600 placeholder-opacity-100 text-gray-700 ${
-                formik.touched.email && formik.errors.email ? 'border-red-500' : ''
-              }`}
+              aria-invalid={Boolean(formik.touched.email && formik.errors.email)}
+              className={`w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors placeholder-gray-600 placeholder-opacity-100 text-gray-700 ${formik.touched.email && formik.errors.email ? 'border-red-500' : ''}`}
               placeholder="john@example.com"
               aria-label="Email address"
             />
-            {formik.touched.email && formik.errors.email && (
-              <p className="text-red-500 text-sm mt-1">{formik.errors.email}</p>
-            )}
+            {formik.touched.email && formik.errors.email && <p className="text-red-500 text-sm mt-1">{formik.errors.email}</p>}
           </div>
         </div>
 
@@ -223,15 +236,12 @@ const ContactForm: React.FC<ContactFormProps> = ({ endpoint = DEFAULT_FORMSPREE_
             value={formik.values.subject}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
-            className={`w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors placeholder-gray-600 placeholder-opacity-100 text-gray-700 ${
-              formik.touched.subject && formik.errors.subject ? 'border-red-500' : ''
-            }`}
+            aria-invalid={Boolean(formik.touched.subject && formik.errors.subject)}
+            className={`w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors placeholder-gray-600 placeholder-opacity-100 text-gray-700 ${formik.touched.subject && formik.errors.subject ? 'border-red-500' : ''}`}
             placeholder="How can we help?"
             aria-label="Subject"
           />
-          {formik.touched.subject && formik.errors.subject && (
-            <p className="text-red-500 text-sm mt-1">{formik.errors.subject}</p>
-          )}
+          {formik.touched.subject && formik.errors.subject && <p className="text-red-500 text-sm mt-1">{formik.errors.subject}</p>}
         </div>
 
         <div className="mb-6">
@@ -243,23 +253,18 @@ const ContactForm: React.FC<ContactFormProps> = ({ endpoint = DEFAULT_FORMSPREE_
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             rows={5}
-            className={`w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors placeholder-gray-600 placeholder-opacity-100 text-gray-700 ${
-              formik.touched.message && formik.errors.message ? 'border-red-500' : ''
-            }`}
+            aria-invalid={Boolean(formik.touched.message && formik.errors.message)}
+            className={`w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors placeholder-gray-600 placeholder-opacity-100 text-gray-700 ${formik.touched.message && formik.errors.message ? 'border-red-500' : ''}`}
             placeholder="Tell us about your project..."
             aria-label="Your message"
           />
-          {formik.touched.message && formik.errors.message && (
-            <p className="text-red-500 text-sm mt-1">{formik.errors.message}</p>
-          )}
+          {formik.touched.message && formik.errors.message && <p className="text-red-500 text-sm mt-1">{formik.errors.message}</p>}
         </div>
 
         <button
           type="submit"
           disabled={formik.isSubmitting}
-          className={`w-full px-6 py-4 text-white rounded-lg font-medium shadow-lg transition-all flex items-center justify-center ${
-            formik.isSubmitting ? 'bg-gray-500 cursor-not-allowed' : 'bg-gradient-to-r from-blue-600 to-indigo-700 hover:from-blue-700 hover:to-indigo-800'
-          }`}
+          className={`w-full px-6 py-4 text-white rounded-lg font-medium shadow-lg transition-all flex items-center justify-center ${formik.isSubmitting ? 'bg-gray-500 cursor-not-allowed' : 'bg-gradient-to-r from-blue-600 to-indigo-700 hover:from-blue-700 hover:to-indigo-800'}`}
           aria-live="polite"
         >
           {formik.isSubmitting ? (

@@ -10,7 +10,7 @@ const Hero = () => {
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="text-center lg:text-left">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
               Transform Your <span className="text-blue-600">Business</span> with Digital Solutions
             </h1>
             <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto lg:mx-0">
