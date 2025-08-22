@@ -114,7 +114,7 @@ const LogoDesignPage = () => {
                 We design distinctive logos that communicate your brand essence, build recognition, and make a lasting impression.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Link href="/portfolio" className="px-8 py-4 bg-white text-blue-600 rounded-lg font-bold shadow-lg hover:bg-blue-50 transition-colors">
+                <Link href="/portfolio" className="px-8 py-4 bg-[#d4111e] hover:bg-[#ff4b51] text-white rounded-lg font-bold shadow-lg transition-colors">
                   View Our Portfolio
                 </Link>
               <a

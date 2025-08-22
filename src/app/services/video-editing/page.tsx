@@ -139,7 +139,7 @@ const VideoEditingPage = () => {
                 Professional video editing services that elevate your content, captivate your audience, and deliver results.
               </p>
               <div className="flex flex-wrap gap-4">
-                <button className="px-8 py-4 bg-white text-blue-600 rounded-lg font-bold shadow-lg hover:bg-blue-50 transition-colors">
+                <button className="px-8 py-4 bg-[#d4111e] hover:bg-[#ff4b51] text-white rounded-lg font-bold shadow-lg transition-colors">
                   Get Started
                 </button>
                 <button className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg font-bold hover:bg-white hover:text-blue-600 transition-colors">
@@ -394,7 +394,7 @@ const VideoEditingPage = () => {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <div className="flex flex-wrap gap-4">
-                <Link href="/portfolio" className="px-8 py-4 bg-white text-blue-600 rounded-lg font-bold shadow-lg hover:bg-blue-50 transition-colors">
+                <Link href="/portfolio" className="px-8 py-4 bg-[#d4111e] hover:bg-[#ff4b51] text-white rounded-lg font-bold shadow-lg transition-colors">
                   View Our Portfolio
                 </Link>
               <a

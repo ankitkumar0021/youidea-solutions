@@ -48,7 +48,7 @@ const Header = () => {
         <div className="flex items-center space-x-4">
           <div className="flex items-center text-sm text-blue-700">
             <HiPhone className="mr-1" />
-            <span>+1 (123) 456-7890</span>
+            <span>+91 9654272754</span>
           </div>
           <div className="text-sm text-gray-600">codemantratechnologies@gmail.com</div>
         </div>
@@ -92,7 +92,7 @@ const Header = () => {
             ))}
               <a
                 href="tel:+911234567890"
-                className="ml-4 px-5 py-2 bg-gradient-to-r from-blue-600 to-indigo-700 text-white rounded-lg font-medium hover:from-blue-700 hover:to-indigo-800 transition-all shadow-md hover:shadow-lg flex items-center gap-2"
+                className="ml-4 px-5 py-2 bg-[#d4111e] hover:bg-[#ff4b51] text-white rounded-lg font-medium  transition-all shadow-md hover:shadow-lg flex items-center gap-2"
               >
                 <HiPhone className="w-5 h-5" />
                 Call Us

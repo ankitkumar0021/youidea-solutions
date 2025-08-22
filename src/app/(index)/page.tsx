@@ -8,6 +8,7 @@ import Testimonials from '../components/homepage/Testimonials';
 import About from '../components/homepage/About';
 import Contact from '../components/homepage/Contact';
 import Head from 'next/head';
+import MainBanner from '@/widget/banners/MainBanner';
 
 export default function Home() {
   return (
@@ -28,6 +29,7 @@ export default function Home() {
     </Head>
     <div className="min-h-screen flex flex-col bg-gradient-to-b from-blue-50 to-indigo-50">
       <main className="flex-grow">
+        <MainBanner />
         <Hero />
         <Services />
         <Stats />

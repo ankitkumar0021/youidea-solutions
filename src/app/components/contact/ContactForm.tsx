@@ -264,7 +264,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ endpoint = DEFAULT_FORMSPREE_
         <button
           type="submit"
           disabled={formik.isSubmitting}
-          className={`w-full px-6 py-4 text-white rounded-lg font-medium shadow-lg transition-all flex items-center justify-center ${formik.isSubmitting ? 'bg-gray-500 cursor-not-allowed' : 'bg-gradient-to-r from-blue-600 to-indigo-700 hover:from-blue-700 hover:to-indigo-800'}`}
+          className={`w-full px-6 py-4 text-white rounded-lg font-medium shadow-lg transition-all flex items-center justify-center ${formik.isSubmitting ? 'bg-[#ff4b51] cursor-not-allowed' : 'bg-[#d4111e] hover:bg-[#ff4b51]'}`}
           aria-live="polite"
         >
           {formik.isSubmitting ? (

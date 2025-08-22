@@ -33,7 +33,7 @@ const Testimonials = () => {
     <section id="testimonials" className="py-20 bg-gradient-to-r from-blue-50 to-indigo-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
+          <h2 className="font-montserrat text-3xl md:text-4xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
           <div className="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Don&apos;t just take our word for it. Here&apos;s what our clients have to say about working with us.
@@ -56,10 +56,10 @@ const Testimonials = () => {
               </div>
               <p className="text-gray-700 text-lg mb-6 italic">{testimonial.content}</p>
               <div className="flex items-center">
-                <div className="bg-gradient-to-r from-blue-600 to-indigo-700 w-12 h-12 rounded-full flex items-center justify-center text-white font-bold">
+                {/* <div className="bg-gradient-to-r from-blue-600 to-indigo-700 w-12 h-12 rounded-full flex items-center justify-center text-white font-bold">
                   {testimonial.name.split(' ').map(n => n[0]).join('')}
-                </div>
-                <div className="ml-4">
+                </div> */}
+                <div className="">
                   <h4 className="font-bold text-gray-900">{testimonial.name}</h4>
                   <p className="text-gray-600 text-sm">{testimonial.role}</p>
                 </div>
