@@ -15,7 +15,7 @@ const ServicesHero = () => {
               We combine technical expertise with creative thinking to deliver innovative solutions that transform businesses and create exceptional digital experiences.
             </p>
             <div className="flex flex-wrap justify-center lg:justify-start gap-4">
-              <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-700 text-white rounded-lg font-medium shadow-lg hover:from-blue-700 hover:to-indigo-800 transition-all">
+              <button className="px-8 py-4 bg-[#d4111e] hover:bg-[#ff4b51] text-white rounded-lg font-medium shadow-lg hover:from-blue-700 hover:to-indigo-800 transition-all">
                 Get a Free Consultation
               </button>
               <button className="px-8 py-4 bg-white text-gray-800 border border-gray-300 rounded-lg font-medium hover:bg-gray-50 transition-colors">

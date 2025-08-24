@@ -140,7 +140,7 @@ const Header = () => {
                 )}
               </div>
             ))}
-            <button className="w-full mt-4 px-4 py-3 bg-gradient-to-r from-blue-600 to-indigo-700 text-white rounded-lg font-medium text-center">Get a Quote</button>
+            <button className="w-full mt-4 px-4 py-3 bg-[#d4111e] hover:bg-[#ff4b51] text-white rounded-lg font-medium text-center">Get a Quote</button>
           </div>
         </div>
       )}

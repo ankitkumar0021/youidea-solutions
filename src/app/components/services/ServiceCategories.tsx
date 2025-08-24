@@ -35,7 +35,7 @@ const ServiceCategories: React.FC<ServiceCategoriesProps> = ({
           >
             {activeCategory === category.id && (
               <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full z-0"
+                className="absolute inset-0 bg-[#d4111e]  rounded-full z-0"
                 layoutId="activeCategory"
                 initial={false}
                 transition={{ type: 'spring', stiffness: 300, damping: 30 }}
