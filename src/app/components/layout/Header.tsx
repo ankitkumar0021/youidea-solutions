@@ -74,7 +74,7 @@ const Header = () => {
           <nav className="hidden md:flex space-x-1">
             {navItems.map((item) => (
               <div key={item.name} className="relative group" onMouseEnter={() => item.subItems && setServicesMenuOpen(true)} onMouseLeave={() => item.subItems && setServicesMenuOpen(false)}>
-                <Link href={item.href} className={`flex items-center px-4 py-2 rounded-lg transition-all ${scrolled ? 'text-gray-700 hover:bg-blue-50 hover:text-blue-600' : 'text-gray-800 hover:bg-blue-100 hover:text-blue-700'}`}>
+                <Link href={item.href} className={`font-montserrat flex items-center px-4 py-2 rounded-lg transition-all ${scrolled ? 'text-gray-700 hover:bg-blue-50 hover:text-blue-600' : 'text-gray-800 hover:bg-blue-100 hover:text-blue-700'}`}>
                   {item.name}
                   {item.subItems && <HiChevronDown className="ml-1" />}
                 </Link>
@@ -82,7 +82,7 @@ const Header = () => {
                 {item.subItems && servicesMenuOpen && (
                   <div className="absolute left-0 mt-1 w-64 bg-white shadow-xl rounded-lg py-2 z-50" onMouseEnter={() => setServicesMenuOpen(true)} onMouseLeave={() => setServicesMenuOpen(false)}>
                     {item.subItems.map((subItem, index) => (
-                      <Link key={index} href={subItem.href} className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                      <Link key={index} href={subItem.href} className="font-montserrat block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                         {subItem.name}
                       </Link>
                     ))}

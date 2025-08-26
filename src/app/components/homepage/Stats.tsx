@@ -58,10 +58,10 @@ const Stats = () => {
 
               {/* Content */}
               <div className="p-6 text-center">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                <h3 className="font-montserrat text-xl font-semibold text-gray-900 mb-2">
                   {stat.label}
                 </h3>
-                <div className="text-3xl font-bold text-blue-600 mb-2">
+                <div className="font-michroma text-3xl font-bold text-blue-600 mb-2">
                   <CountUp end={stat.value} duration={3} />{stat.suffix}
                 </div>
                 <p className="text-gray-600 text-sm">{stat.description}</p>
