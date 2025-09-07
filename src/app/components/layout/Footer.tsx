@@ -51,7 +51,7 @@ const Footer = () => {
               </Link>
             </div>
             <p className="mb-6 text-white">
-              Code Mantra Technologies is a leading provider of web design, mobile app development, and video editing services. We are dedicated to delivering high-quality solutions that help businesses succeed online.
+              Code Mantra Technologies is best web development services providing company in India and also provide mobile app development, video editing services.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="bg-blue-700 hover:bg-blue-600 text-white p-2 rounded-full transition-colors">

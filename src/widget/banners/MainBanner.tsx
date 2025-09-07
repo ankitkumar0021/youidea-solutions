@@ -37,7 +37,7 @@ const banners = [
     link: "#",
     alt: "Banner 3",
     title: "Mantra of Modern Web",
-    subtitle: "Design. Develop. Deliever",
+    subtitle: "Best Design. Best Development. Best Delievery",
     ctaText: "See Portfolio",
     ctaLink: "/portfolio",
   },

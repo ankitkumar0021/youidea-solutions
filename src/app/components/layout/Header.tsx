@@ -32,7 +32,6 @@ const Header = () => {
         { name: 'Graphic Design', href: '/services/graphic-design' },
         { name: 'Video Editing', href: '/services/video-editing' },
         { name: 'SEO Services', href: '/services/seo' },
-        // { name: 'Digital Marketing', href: '/services/digital-marketing' },
         { name: 'Logo Design', href: '/services/logo-design' },
       ],
     },
