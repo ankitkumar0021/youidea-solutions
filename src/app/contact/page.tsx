@@ -8,7 +8,7 @@ import Head from 'next/head';
 const ContactPage: React.FC = () => {
   const contactInfo = [
     { icon: <HiLocationMarker className="w-6 h-6" />, title: 'Our Location', details: '3rd Floor, JOP Plaza, 305, Sector 18, Noida, Uttar Pradesh, 201301', color: 'bg-blue-100 text-blue-600' },
-    { icon: <HiPhone className="w-6 h-6" />, title: 'Phone Number', details: '+91 9315235323', color: 'bg-green-100 text-green-600' },
+    { icon: <HiPhone className="w-6 h-6" />, title: 'Phone Number', details: '+91 7042107723', color: 'bg-green-100 text-green-600' },
     { icon: <HiMail className="w-6 h-6" />, title: 'Email Address', details: 'codemantratechnologies@gmail.com', color: 'bg-purple-100 text-purple-600' }
   ];
 

@@ -23,32 +23,27 @@ const Services = () => {
           <div className="mx-auto w-24 h-1 rounded-full bg-gradient-to-r from-[#d4111e] via-indigo-600 to-[#d4111e] mb-6" />
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">We offer a wide range of digital services to help your business grow and succeed online.</p>
         </div>
-
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-          {services.map((service, index) => (
+          {services && services?.length>=0 && services?.map((service, index) => (
             <article key={index} className="group relative rounded-2xl p-[1px] bg-gradient-to-r from-[#d4111e] via-indigo-600 to-[#d4111e] overflow-hidden transition-transform hover:scale-[1.01]">
               <div className="rounded-2xl bg-white/95 backdrop-blur-sm p-6 h-full flex flex-col justify-between shadow-lg hover:shadow-2xl transition-all">
                 <div>
                   <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-indigo-600 to-[#d4111e] inline-flex items-center justify-center text-white mb-5 shadow-md transform transition-transform group-hover:scale-110">
-                    {service.icon}
+                    {service?.icon}
                   </div>
-
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">
                     <span className="relative inline-block">
-                      {service.title}
+                      {service?.title}
                       <span className="absolute left-0 -bottom-1 block h-0.5 w-full bg-gradient-to-r from-[#d4111e] via-indigo-600 to-[#d4111e] scale-x-0 transform origin-left transition-transform group-hover:scale-x-100" />
                     </span>
                   </h3>
-
-                  <p className="text-gray-600 mb-6">{service.description}</p>
+                  <p className="text-gray-600 mb-6">{service?.description}</p>
                 </div>
-
                 <div className="mt-3 flex items-center justify-between">
-                  <Link href={service.link} className="inline-flex items-center gap-2 text-sm font-medium text-indigo-600 hover:text-[#d4111e] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#d4111e]/40">
+                  <Link href={service?.link} className="inline-flex items-center gap-2 text-sm font-medium text-indigo-600 hover:text-[#d4111e] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#d4111e]/40">
                     Learn more
                     <HiArrowRight className="transform transition-transform group-hover:translate-x-1" />
                   </Link>
-
                   <span className="inline-flex items-center rounded-full px-3 py-1 text-xs font-medium bg-gray-100 text-gray-700">Trusted</span>
                 </div>
               </div>

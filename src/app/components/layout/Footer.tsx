@@ -133,7 +133,7 @@ const Footer = () => {
                 <div className="bg-blue-800 p-2 rounded-full mr-3">
                   <FaPhoneAlt  className="text-white" size={16} />
                 </div>
-                <span className="text-white">9315235323</span>
+                <span className="text-white">7042107723</span>
               </li>
               <li className="flex items-center">
                 <div className="bg-blue-800 p-2 rounded-full mr-3">
