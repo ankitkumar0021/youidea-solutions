@@ -15,6 +15,7 @@ export default function Home() {
     <>
     <Head>
         <title>Best web devlopments Services| Best Video Editing | Best Graphic design Services | Best Mobile App Services | Best Seo Services | Best Ecommerce Services | Code Mantra Technologies</title>
+        <meta name="google-site-verification" content="E0v5bhh3CcsYPpeyHB0EK3ISwFlmzS8c6PDzjzlUZig" />
         <meta name="description" content="Get in touch with our team for web design, mobile app development, and Video Editing" />
         <meta name="description" content="Code Mantra Technologies delivers professional web design, mobile app development, e-commerce services, SEO services, digital marketing, and logo design. Grow your business with Mycode Mantra technologies" />
         <meta name="keywords" content="web design, mobile app development, e-commerce, SEO services, digital marketing, logo design, web development, responsive websites" />
