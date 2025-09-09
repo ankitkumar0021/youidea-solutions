@@ -23,7 +23,6 @@ export default function Home() {
         <meta property="og:description" content="Professional web design, mobile app development, and digital marketing services to grow your business." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.mycodemantra.com/" />
-        {/* <meta property="og:image" content="https://www.yourideasolutions.com/images/og-image.jpg" /> */}
         <meta name="twitter:card" content="summary_large_image" />
 
     </Head>
